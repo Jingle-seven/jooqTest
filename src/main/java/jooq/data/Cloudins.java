@@ -10,25 +10,8 @@ import java.util.List;
 
 import javax.annotation.Generated;
 
-import jooq.data.tables.CloudinsConfig;
-import jooq.data.tables.CloudinsField;
-import jooq.data.tables.CloudinsLog;
-import jooq.data.tables.CloudinsRole;
-import jooq.data.tables.CloudinsUser;
-import jooq.data.tables.HistoricalPeak;
-import jooq.data.tables.JobSummaryBasic;
-import jooq.data.tables.JobTypeSummary;
-import jooq.data.tables.PlayEvolutions;
-import jooq.data.tables.SysConfigs;
-import jooq.data.tables.UserJobSummary;
-import jooq.data.tables.YarnAppCheckLog;
-import jooq.data.tables.YarnAppCheckSetting;
-import jooq.data.tables.YarnAppHeuristicResult;
-import jooq.data.tables.YarnAppHeuristicResultDetails;
-import jooq.data.tables.YarnAppResult;
-import jooq.data.tables.ZipkinAnnotations;
-import jooq.data.tables.ZipkinDependencies;
-import jooq.data.tables.ZipkinSpans;
+import jooq.data.tables.*;
+import jooq.data.tables.CloudinsUserFieldAppliTable;
 
 import org.jooq.Catalog;
 import org.jooq.Table;
@@ -48,7 +31,7 @@ import org.jooq.impl.SchemaImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class Cloudins extends SchemaImpl {
 
-    private static final long serialVersionUID = -1651091624;
+    private static final long serialVersionUID = 716540527;
 
     /**
      * The reference instance of <code>cloudins</code>
@@ -63,7 +46,7 @@ public class Cloudins extends SchemaImpl {
     /**
      * The table <code>cloudins.cloudins_field</code>.
      */
-    public final CloudinsField CLOUDINS_FIELD = jooq.data.tables.CloudinsField.CLOUDINS_FIELD;
+    public final CloudinsFieldTable CLOUDINS_FIELD = CloudinsFieldTable.CLOUDINS_FIELD;
 
     /**
      * The table <code>cloudins.cloudins_log</code>.
@@ -79,6 +62,11 @@ public class Cloudins extends SchemaImpl {
      * The table <code>cloudins.cloudins_user</code>.
      */
     public final CloudinsUser CLOUDINS_USER = jooq.data.tables.CloudinsUser.CLOUDINS_USER;
+
+    /**
+     * The table <code>cloudins.cloudins_user_field_appli</code>.
+     */
+    public final CloudinsUserFieldAppliTable CLOUDINS_USER_FIELD_APPLI = CloudinsUserFieldAppliTable.CLOUDINS_USER_FIELD_APPLI;
 
     /**
      * The table <code>cloudins.historical_peak</code>.
@@ -104,6 +92,11 @@ public class Cloudins extends SchemaImpl {
      * The table <code>cloudins.sys_configs</code>.
      */
     public final SysConfigs SYS_CONFIGS = jooq.data.tables.SysConfigs.SYS_CONFIGS;
+
+    /**
+     * VIEW
+     */
+    public final TCounter T_COUNTER = jooq.data.tables.TCounter.T_COUNTER;
 
     /**
      * The table <code>cloudins.user_job_summary</code>.
@@ -141,6 +134,11 @@ public class Cloudins extends SchemaImpl {
     public final ZipkinAnnotations ZIPKIN_ANNOTATIONS = jooq.data.tables.ZipkinAnnotations.ZIPKIN_ANNOTATIONS;
 
     /**
+     * VIEW
+     */
+    public final ZipkinCounter ZIPKIN_COUNTER = jooq.data.tables.ZipkinCounter.ZIPKIN_COUNTER;
+
+    /**
      * The table <code>cloudins.zipkin_dependencies</code>.
      */
     public final ZipkinDependencies ZIPKIN_DEPENDENCIES = jooq.data.tables.ZipkinDependencies.ZIPKIN_DEPENDENCIES;
@@ -176,15 +174,17 @@ public class Cloudins extends SchemaImpl {
     private final List<Table<?>> getTables0() {
         return Arrays.<Table<?>>asList(
             CloudinsConfig.CLOUDINS_CONFIG,
-            CloudinsField.CLOUDINS_FIELD,
+            CloudinsFieldTable.CLOUDINS_FIELD,
             CloudinsLog.CLOUDINS_LOG,
             CloudinsRole.CLOUDINS_ROLE,
             CloudinsUser.CLOUDINS_USER,
+            CloudinsUserFieldAppliTable.CLOUDINS_USER_FIELD_APPLI,
             HistoricalPeak.HISTORICAL_PEAK,
             JobSummaryBasic.JOB_SUMMARY_BASIC,
             JobTypeSummary.JOB_TYPE_SUMMARY,
             PlayEvolutions.PLAY_EVOLUTIONS,
             SysConfigs.SYS_CONFIGS,
+            TCounter.T_COUNTER,
             UserJobSummary.USER_JOB_SUMMARY,
             YarnAppCheckLog.YARN_APP_CHECK_LOG,
             YarnAppCheckSetting.YARN_APP_CHECK_SETTING,
@@ -192,6 +192,7 @@ public class Cloudins extends SchemaImpl {
             YarnAppHeuristicResultDetails.YARN_APP_HEURISTIC_RESULT_DETAILS,
             YarnAppResult.YARN_APP_RESULT,
             ZipkinAnnotations.ZIPKIN_ANNOTATIONS,
+            ZipkinCounter.ZIPKIN_COUNTER,
             ZipkinDependencies.ZIPKIN_DEPENDENCIES,
             ZipkinSpans.ZIPKIN_SPANS);
     }

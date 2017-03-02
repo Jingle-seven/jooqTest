@@ -81,7 +81,7 @@ public class YarnAppCheckLogDao extends DAOImpl<YarnAppCheckLogRecord, jooq.data
     /**
      * Fetch records that have <code>time IN (values)</code>
      */
-    public List<jooq.data.tables.pojos.YarnAppCheckLog> fetchByTime(Long... values) {
+    public List<jooq.data.tables.pojos.YarnAppCheckLog> fetchByTime(String... values) {
         return fetch(YarnAppCheckLog.YARN_APP_CHECK_LOG.TIME, values);
     }
 
@@ -100,9 +100,9 @@ public class YarnAppCheckLogDao extends DAOImpl<YarnAppCheckLogRecord, jooq.data
     }
 
     /**
-     * Fetch records that have <code>read IN (values)</code>
+     * Fetch records that have <code>isread IN (values)</code>
      */
-    public List<jooq.data.tables.pojos.YarnAppCheckLog> fetchByRead(Boolean... values) {
-        return fetch(YarnAppCheckLog.YARN_APP_CHECK_LOG.READ, values);
+    public List<jooq.data.tables.pojos.YarnAppCheckLog> fetchByIsread(Boolean... values) {
+        return fetch(YarnAppCheckLog.YARN_APP_CHECK_LOG.ISREAD, values);
     }
 }

@@ -22,15 +22,15 @@ import javax.annotation.Generated;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class YarnAppCheckLog implements Serializable {
 
-    private static final long serialVersionUID = 1345098179;
+    private static final long serialVersionUID = 591900441;
 
     private Long    id;
     private String  appId;
     private String  message;
-    private Long    time;
+    private String  time;
     private String  type;
     private Boolean displayed;
-    private Boolean read;
+    private Boolean isread;
 
     public YarnAppCheckLog() {}
 
@@ -41,17 +41,17 @@ public class YarnAppCheckLog implements Serializable {
         this.time = value.time;
         this.type = value.type;
         this.displayed = value.displayed;
-        this.read = value.read;
+        this.isread = value.isread;
     }
 
     public YarnAppCheckLog(
         Long    id,
         String  appId,
         String  message,
-        Long    time,
+        String  time,
         String  type,
         Boolean displayed,
-        Boolean read
+        Boolean isread
     ) {
         this.id = id;
         this.appId = appId;
@@ -59,7 +59,7 @@ public class YarnAppCheckLog implements Serializable {
         this.time = time;
         this.type = type;
         this.displayed = displayed;
-        this.read = read;
+        this.isread = isread;
     }
 
     public Long getId() {
@@ -86,11 +86,11 @@ public class YarnAppCheckLog implements Serializable {
         this.message = message;
     }
 
-    public Long getTime() {
+    public String getTime() {
         return this.time;
     }
 
-    public void setTime(Long time) {
+    public void setTime(String time) {
         this.time = time;
     }
 
@@ -110,12 +110,12 @@ public class YarnAppCheckLog implements Serializable {
         this.displayed = displayed;
     }
 
-    public Boolean getRead() {
-        return this.read;
+    public Boolean getIsread() {
+        return this.isread;
     }
 
-    public void setRead(Boolean read) {
-        this.read = read;
+    public void setIsread(Boolean isread) {
+        this.isread = isread;
     }
 
     @Override
@@ -128,7 +128,7 @@ public class YarnAppCheckLog implements Serializable {
         sb.append(", ").append(time);
         sb.append(", ").append(type);
         sb.append(", ").append(displayed);
-        sb.append(", ").append(read);
+        sb.append(", ").append(isread);
 
         sb.append(")");
         return sb.toString();

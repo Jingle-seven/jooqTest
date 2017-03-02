@@ -22,12 +22,12 @@ import javax.annotation.Generated;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class CloudinsRole implements Serializable {
 
-    private static final long serialVersionUID = 2087079851;
+    private static final long serialVersionUID = 459651263;
 
-    private Integer id;
-    private String  name;
-    private String  auth;
-    private String  remark;
+    private Long   id;
+    private String name;
+    private String auth;
+    private String remark;
 
     public CloudinsRole() {}
 
@@ -39,10 +39,10 @@ public class CloudinsRole implements Serializable {
     }
 
     public CloudinsRole(
-        Integer id,
-        String  name,
-        String  auth,
-        String  remark
+        Long   id,
+        String name,
+        String auth,
+        String remark
     ) {
         this.id = id;
         this.name = name;
@@ -50,11 +50,11 @@ public class CloudinsRole implements Serializable {
         this.remark = remark;
     }
 
-    public Integer getId() {
+    public Long getId() {
         return this.id;
     }
 
-    public void setId(Integer id) {
+    public void setId(Long id) {
         this.id = id;
     }
 

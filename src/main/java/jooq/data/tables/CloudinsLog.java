@@ -35,7 +35,7 @@ import org.jooq.impl.TableImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class CloudinsLog extends TableImpl<CloudinsLogRecord> {
 
-    private static final long serialVersionUID = -1582651799;
+    private static final long serialVersionUID = 144670130;
 
     /**
      * The reference instance of <code>cloudins.cloudins_log</code>
@@ -73,7 +73,7 @@ public class CloudinsLog extends TableImpl<CloudinsLogRecord> {
     /**
      * The column <code>cloudins.cloudins_log.time</code>.
      */
-    public final TableField<CloudinsLogRecord, Long> TIME = createField("time", org.jooq.impl.SQLDataType.BIGINT, this, "");
+    public final TableField<CloudinsLogRecord, String> TIME = createField("time", org.jooq.impl.SQLDataType.CHAR.length(20), this, "");
 
     /**
      * The column <code>cloudins.cloudins_log.line</code>.
@@ -86,9 +86,9 @@ public class CloudinsLog extends TableImpl<CloudinsLogRecord> {
     public final TableField<CloudinsLogRecord, Boolean> DISPLAYED = createField("displayed", org.jooq.impl.SQLDataType.BOOLEAN.nullable(false).defaultValue(org.jooq.impl.DSL.inline("0", org.jooq.impl.SQLDataType.BOOLEAN)), this, "");
 
     /**
-     * The column <code>cloudins.cloudins_log.read</code>.
+     * The column <code>cloudins.cloudins_log.isread</code>.
      */
-    public final TableField<CloudinsLogRecord, Boolean> READ = createField("read", org.jooq.impl.SQLDataType.BOOLEAN.nullable(false).defaultValue(org.jooq.impl.DSL.inline("0", org.jooq.impl.SQLDataType.BOOLEAN)), this, "");
+    public final TableField<CloudinsLogRecord, Boolean> ISREAD = createField("isread", org.jooq.impl.SQLDataType.BOOLEAN.nullable(false).defaultValue(org.jooq.impl.DSL.inline("0", org.jooq.impl.SQLDataType.BOOLEAN)), this, "");
 
     /**
      * Create a <code>cloudins.cloudins_log</code> table reference

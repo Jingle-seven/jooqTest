@@ -22,16 +22,16 @@ import javax.annotation.Generated;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class CloudinsLog implements Serializable {
 
-    private static final long serialVersionUID = -817989718;
+    private static final long serialVersionUID = -1749559724;
 
     private Long    id;
     private String  level;
     private String  method;
     private String  message;
-    private Long    time;
+    private String  time;
     private Integer line;
     private Boolean displayed;
-    private Boolean read;
+    private Boolean isread;
 
     public CloudinsLog() {}
 
@@ -43,7 +43,7 @@ public class CloudinsLog implements Serializable {
         this.time = value.time;
         this.line = value.line;
         this.displayed = value.displayed;
-        this.read = value.read;
+        this.isread = value.isread;
     }
 
     public CloudinsLog(
@@ -51,10 +51,10 @@ public class CloudinsLog implements Serializable {
         String  level,
         String  method,
         String  message,
-        Long    time,
+        String  time,
         Integer line,
         Boolean displayed,
-        Boolean read
+        Boolean isread
     ) {
         this.id = id;
         this.level = level;
@@ -63,7 +63,7 @@ public class CloudinsLog implements Serializable {
         this.time = time;
         this.line = line;
         this.displayed = displayed;
-        this.read = read;
+        this.isread = isread;
     }
 
     public Long getId() {
@@ -98,11 +98,11 @@ public class CloudinsLog implements Serializable {
         this.message = message;
     }
 
-    public Long getTime() {
+    public String getTime() {
         return this.time;
     }
 
-    public void setTime(Long time) {
+    public void setTime(String time) {
         this.time = time;
     }
 
@@ -122,12 +122,12 @@ public class CloudinsLog implements Serializable {
         this.displayed = displayed;
     }
 
-    public Boolean getRead() {
-        return this.read;
+    public Boolean getIsread() {
+        return this.isread;
     }
 
-    public void setRead(Boolean read) {
-        this.read = read;
+    public void setIsread(Boolean isread) {
+        this.isread = isread;
     }
 
     @Override
@@ -141,7 +141,7 @@ public class CloudinsLog implements Serializable {
         sb.append(", ").append(time);
         sb.append(", ").append(line);
         sb.append(", ").append(displayed);
-        sb.append(", ").append(read);
+        sb.append(", ").append(isread);
 
         sb.append(")");
         return sb.toString();

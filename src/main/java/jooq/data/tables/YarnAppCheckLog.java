@@ -35,7 +35,7 @@ import org.jooq.impl.TableImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class YarnAppCheckLog extends TableImpl<YarnAppCheckLogRecord> {
 
-    private static final long serialVersionUID = 299062940;
+    private static final long serialVersionUID = -966655581;
 
     /**
      * The reference instance of <code>cloudins.yarn_app_check_log</code>
@@ -68,7 +68,7 @@ public class YarnAppCheckLog extends TableImpl<YarnAppCheckLogRecord> {
     /**
      * The column <code>cloudins.yarn_app_check_log.time</code>.
      */
-    public final TableField<YarnAppCheckLogRecord, Long> TIME = createField("time", org.jooq.impl.SQLDataType.BIGINT.nullable(false).defaultValue(org.jooq.impl.DSL.inline("0", org.jooq.impl.SQLDataType.BIGINT)), this, "");
+    public final TableField<YarnAppCheckLogRecord, String> TIME = createField("time", org.jooq.impl.SQLDataType.VARCHAR.length(50).nullable(false).defaultValue(org.jooq.impl.DSL.inline("", org.jooq.impl.SQLDataType.VARCHAR)), this, "");
 
     /**
      * The column <code>cloudins.yarn_app_check_log.type</code>.
@@ -81,9 +81,9 @@ public class YarnAppCheckLog extends TableImpl<YarnAppCheckLogRecord> {
     public final TableField<YarnAppCheckLogRecord, Boolean> DISPLAYED = createField("displayed", org.jooq.impl.SQLDataType.BOOLEAN.nullable(false).defaultValue(org.jooq.impl.DSL.inline("0", org.jooq.impl.SQLDataType.BOOLEAN)), this, "");
 
     /**
-     * The column <code>cloudins.yarn_app_check_log.read</code>.
+     * The column <code>cloudins.yarn_app_check_log.isread</code>.
      */
-    public final TableField<YarnAppCheckLogRecord, Boolean> READ = createField("read", org.jooq.impl.SQLDataType.BOOLEAN.nullable(false).defaultValue(org.jooq.impl.DSL.inline("0", org.jooq.impl.SQLDataType.BOOLEAN)), this, "");
+    public final TableField<YarnAppCheckLogRecord, Boolean> ISREAD = createField("isread", org.jooq.impl.SQLDataType.BOOLEAN.nullable(false).defaultValue(org.jooq.impl.DSL.inline("0", org.jooq.impl.SQLDataType.BOOLEAN)), this, "");
 
     /**
      * Create a <code>cloudins.yarn_app_check_log</code> table reference

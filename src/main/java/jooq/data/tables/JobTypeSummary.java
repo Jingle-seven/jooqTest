@@ -14,7 +14,6 @@ import jooq.data.Keys;
 import jooq.data.tables.records.JobTypeSummaryRecord;
 
 import org.jooq.Field;
-import org.jooq.ForeignKey;
 import org.jooq.Schema;
 import org.jooq.Table;
 import org.jooq.TableField;
@@ -35,7 +34,7 @@ import org.jooq.impl.TableImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class JobTypeSummary extends TableImpl<JobTypeSummaryRecord> {
 
-    private static final long serialVersionUID = -1171044863;
+    private static final long serialVersionUID = 801314177;
 
     /**
      * The reference instance of <code>cloudins.job_type_summary</code>
@@ -139,14 +138,6 @@ public class JobTypeSummary extends TableImpl<JobTypeSummaryRecord> {
     @Override
     public List<UniqueKey<JobTypeSummaryRecord>> getKeys() {
         return Arrays.<UniqueKey<JobTypeSummaryRecord>>asList(Keys.KEY_JOB_TYPE_SUMMARY_PRIMARY);
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    @Override
-    public List<ForeignKey<JobTypeSummaryRecord, ?>> getReferences() {
-        return Arrays.<ForeignKey<JobTypeSummaryRecord, ?>>asList(Keys.FK_JOB_TYPE_SUMMARY_JOB_SUMMARY_BASIC);
     }
 
     /**

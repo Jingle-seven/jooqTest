@@ -35,7 +35,7 @@ import org.jooq.impl.TableImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class YarnAppCheckSetting extends TableImpl<YarnAppCheckSettingRecord> {
 
-    private static final long serialVersionUID = -541159497;
+    private static final long serialVersionUID = -614320640;
 
     /**
      * The reference instance of <code>cloudins.yarn_app_check_setting</code>
@@ -58,7 +58,7 @@ public class YarnAppCheckSetting extends TableImpl<YarnAppCheckSettingRecord> {
     /**
      * The column <code>cloudins.yarn_app_check_setting.name</code>.
      */
-    public final TableField<YarnAppCheckSettingRecord, String> NAME = createField("name", org.jooq.impl.SQLDataType.VARCHAR.length(255).nullable(false).defaultValue(org.jooq.impl.DSL.inline("", org.jooq.impl.SQLDataType.VARCHAR)), this, "");
+    public final TableField<YarnAppCheckSettingRecord, String> NAME = createField("name", org.jooq.impl.SQLDataType.VARCHAR.length(255).nullable(false).defaultValue(org.jooq.impl.DSL.inline("NAN", org.jooq.impl.SQLDataType.VARCHAR)), this, "");
 
     /**
      * The column <code>cloudins.yarn_app_check_setting.type</code>.

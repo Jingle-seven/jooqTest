@@ -88,7 +88,7 @@ public class CloudinsLogDao extends DAOImpl<CloudinsLogRecord, jooq.data.tables.
     /**
      * Fetch records that have <code>time IN (values)</code>
      */
-    public List<jooq.data.tables.pojos.CloudinsLog> fetchByTime(Long... values) {
+    public List<jooq.data.tables.pojos.CloudinsLog> fetchByTime(String... values) {
         return fetch(CloudinsLog.CLOUDINS_LOG.TIME, values);
     }
 
@@ -107,9 +107,9 @@ public class CloudinsLogDao extends DAOImpl<CloudinsLogRecord, jooq.data.tables.
     }
 
     /**
-     * Fetch records that have <code>read IN (values)</code>
+     * Fetch records that have <code>isread IN (values)</code>
      */
-    public List<jooq.data.tables.pojos.CloudinsLog> fetchByRead(Boolean... values) {
-        return fetch(CloudinsLog.CLOUDINS_LOG.READ, values);
+    public List<jooq.data.tables.pojos.CloudinsLog> fetchByIsread(Boolean... values) {
+        return fetch(CloudinsLog.CLOUDINS_LOG.ISREAD, values);
     }
 }

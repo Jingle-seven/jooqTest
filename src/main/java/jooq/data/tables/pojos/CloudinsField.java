@@ -22,47 +22,59 @@ import javax.annotation.Generated;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class CloudinsField implements Serializable {
 
-    private static final long serialVersionUID = 713835153;
+    private static final long serialVersionUID = 336680090;
 
-    private Integer id;
-    private String  name;
-    private String  hostIp;
-    private String  hostUsername;
-    private String  hostPassword;
-    private String  remark;
+    private Long   id;
+    private String name;
+    private Long   managerId;
+    private String managerName;
+    private String hostIp;
+    private String hostUsername;
+    private String hostPassword;
+    private String company;
+    private String remark;
 
     public CloudinsField() {}
 
     public CloudinsField(CloudinsField value) {
         this.id = value.id;
         this.name = value.name;
+        this.managerId = value.managerId;
+        this.managerName = value.managerName;
         this.hostIp = value.hostIp;
         this.hostUsername = value.hostUsername;
         this.hostPassword = value.hostPassword;
+        this.company = value.company;
         this.remark = value.remark;
     }
 
     public CloudinsField(
-        Integer id,
-        String  name,
-        String  hostIp,
-        String  hostUsername,
-        String  hostPassword,
-        String  remark
+        Long   id,
+        String name,
+        Long   managerId,
+        String managerName,
+        String hostIp,
+        String hostUsername,
+        String hostPassword,
+        String company,
+        String remark
     ) {
         this.id = id;
         this.name = name;
+        this.managerId = managerId;
+        this.managerName = managerName;
         this.hostIp = hostIp;
         this.hostUsername = hostUsername;
         this.hostPassword = hostPassword;
+        this.company = company;
         this.remark = remark;
     }
 
-    public Integer getId() {
+    public Long getId() {
         return this.id;
     }
 
-    public void setId(Integer id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -72,6 +84,22 @@ public class CloudinsField implements Serializable {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public Long getManagerId() {
+        return this.managerId;
+    }
+
+    public void setManagerId(Long managerId) {
+        this.managerId = managerId;
+    }
+
+    public String getManagerName() {
+        return this.managerName;
+    }
+
+    public void setManagerName(String managerName) {
+        this.managerName = managerName;
     }
 
     public String getHostIp() {
@@ -98,6 +126,14 @@ public class CloudinsField implements Serializable {
         this.hostPassword = hostPassword;
     }
 
+    public String getCompany() {
+        return this.company;
+    }
+
+    public void setCompany(String company) {
+        this.company = company;
+    }
+
     public String getRemark() {
         return this.remark;
     }
@@ -108,13 +144,16 @@ public class CloudinsField implements Serializable {
 
     @Override
     public String toString() {
-        StringBuilder sb = new StringBuilder("CloudinsField (");
+        StringBuilder sb = new StringBuilder("CloudinsFieldTable (");
 
         sb.append(id);
         sb.append(", ").append(name);
+        sb.append(", ").append(managerId);
+        sb.append(", ").append(managerName);
         sb.append(", ").append(hostIp);
         sb.append(", ").append(hostUsername);
         sb.append(", ").append(hostPassword);
+        sb.append(", ").append(company);
         sb.append(", ").append(remark);
 
         sb.append(")");

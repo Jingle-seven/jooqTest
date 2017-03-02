@@ -22,14 +22,19 @@ import javax.annotation.Generated;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class CloudinsUser implements Serializable {
 
-    private static final long serialVersionUID = 649797047;
+    private static final long serialVersionUID = -258034194;
 
-    private Integer id;
-    private Integer roleId;
-    private String  fieldId;
+    private Long    id;
+    private Long    roleId;
+    private Long    fieldId;
+    private String  account;
     private String  name;
     private String  password;
+    private Boolean gender;
     private String  mail;
+    private String  company;
+    private Long    phone;
+    private Long    qq;
     private String  status;
     private String  remark;
 
@@ -39,55 +44,78 @@ public class CloudinsUser implements Serializable {
         this.id = value.id;
         this.roleId = value.roleId;
         this.fieldId = value.fieldId;
+        this.account = value.account;
         this.name = value.name;
         this.password = value.password;
+        this.gender = value.gender;
         this.mail = value.mail;
+        this.company = value.company;
+        this.phone = value.phone;
+        this.qq = value.qq;
         this.status = value.status;
         this.remark = value.remark;
     }
 
     public CloudinsUser(
-        Integer id,
-        Integer roleId,
-        String  fieldId,
+        Long    id,
+        Long    roleId,
+        Long    fieldId,
+        String  account,
         String  name,
         String  password,
+        Boolean gender,
         String  mail,
+        String  company,
+        Long    phone,
+        Long    qq,
         String  status,
         String  remark
     ) {
         this.id = id;
         this.roleId = roleId;
         this.fieldId = fieldId;
+        this.account = account;
         this.name = name;
         this.password = password;
+        this.gender = gender;
         this.mail = mail;
+        this.company = company;
+        this.phone = phone;
+        this.qq = qq;
         this.status = status;
         this.remark = remark;
     }
 
-    public Integer getId() {
+    public Long getId() {
         return this.id;
     }
 
-    public void setId(Integer id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
-    public Integer getRoleId() {
+    public Long getRoleId() {
         return this.roleId;
     }
 
-    public void setRoleId(Integer roleId) {
+    public void setRoleId(Long roleId) {
         this.roleId = roleId;
     }
 
-    public String getFieldId() {
+    public Long getFieldId() {
         return this.fieldId;
     }
 
-    public void setFieldId(String fieldId) {
+    public void setFieldId(Long fieldId) {
         this.fieldId = fieldId;
+    }
+
+    public String getAccount() {
+        return this.account;
+    }
+
+    public void setAccount(String account) {
+        this.account = account;
     }
 
     public String getName() {
@@ -106,12 +134,44 @@ public class CloudinsUser implements Serializable {
         this.password = password;
     }
 
+    public Boolean getGender() {
+        return this.gender;
+    }
+
+    public void setGender(Boolean gender) {
+        this.gender = gender;
+    }
+
     public String getMail() {
         return this.mail;
     }
 
     public void setMail(String mail) {
         this.mail = mail;
+    }
+
+    public String getCompany() {
+        return this.company;
+    }
+
+    public void setCompany(String company) {
+        this.company = company;
+    }
+
+    public Long getPhone() {
+        return this.phone;
+    }
+
+    public void setPhone(Long phone) {
+        this.phone = phone;
+    }
+
+    public Long getQq() {
+        return this.qq;
+    }
+
+    public void setQq(Long qq) {
+        this.qq = qq;
     }
 
     public String getStatus() {
@@ -137,9 +197,14 @@ public class CloudinsUser implements Serializable {
         sb.append(id);
         sb.append(", ").append(roleId);
         sb.append(", ").append(fieldId);
+        sb.append(", ").append(account);
         sb.append(", ").append(name);
         sb.append(", ").append(password);
+        sb.append(", ").append(gender);
         sb.append(", ").append(mail);
+        sb.append(", ").append(company);
+        sb.append(", ").append(phone);
+        sb.append(", ").append(qq);
         sb.append(", ").append(status);
         sb.append(", ").append(remark);
 

@@ -69,8 +69,8 @@
                         <configuration>
                             <jdbc>
                                 <driver>com.mysql.jdbc.Driver</driver>
-                                <url>jdbc:mysql://10.17.36.55:3306/?useUnicode=true&amp;useJDBCCompliantTimezoneShift=true&amp;useLegacyDatetimeCode=false&amp;serverTimezone=UTC</url>
-                                <user>root</user>
+                                <url>jdbc:mysql://127.1.1.2:3306/?useUnicode=true&amp;useJDBCCompliantTimezoneShift=true&amp;useLegacyDatetimeCode=false&amp;serverTimezone=UTC</url>
+                                <user>xjh</user>
                                 <password>z</password>
                             </jdbc>
                             <generator>

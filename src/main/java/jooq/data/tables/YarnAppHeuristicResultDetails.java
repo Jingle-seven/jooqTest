@@ -14,7 +14,6 @@ import jooq.data.Keys;
 import jooq.data.tables.records.YarnAppHeuristicResultDetailsRecord;
 
 import org.jooq.Field;
-import org.jooq.ForeignKey;
 import org.jooq.Schema;
 import org.jooq.Table;
 import org.jooq.TableField;
@@ -35,7 +34,7 @@ import org.jooq.impl.TableImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class YarnAppHeuristicResultDetails extends TableImpl<YarnAppHeuristicResultDetailsRecord> {
 
-    private static final long serialVersionUID = 339067747;
+    private static final long serialVersionUID = -571681312;
 
     /**
      * The reference instance of <code>cloudins.yarn_app_heuristic_result_details</code>
@@ -114,14 +113,6 @@ public class YarnAppHeuristicResultDetails extends TableImpl<YarnAppHeuristicRes
     @Override
     public List<UniqueKey<YarnAppHeuristicResultDetailsRecord>> getKeys() {
         return Arrays.<UniqueKey<YarnAppHeuristicResultDetailsRecord>>asList(Keys.KEY_YARN_APP_HEURISTIC_RESULT_DETAILS_PRIMARY);
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    @Override
-    public List<ForeignKey<YarnAppHeuristicResultDetailsRecord, ?>> getReferences() {
-        return Arrays.<ForeignKey<YarnAppHeuristicResultDetailsRecord, ?>>asList(Keys.YARN_APP_HEURISTIC_RESULT_DETAILS_F1);
     }
 
     /**
