@@ -28,185 +28,185 @@ import org.jooq.impl.UpdatableRecordImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class CloudinsUserRecord extends UpdatableRecordImpl<CloudinsUserRecord> implements Record13<Long, Long, Long, String, String, String, Boolean, String, String, Long, Long, String, String> {
 
-    private static final long serialVersionUID = 630405308;
+    private static final long serialVersionUID = -2068877126;
 
     /**
-     * Setter for <code>cloudins.cloudins_user.id</code>.
+     * Setter for <code>cloudins_apm.cloudins_user.id</code>.
      */
     public void setId(Long value) {
         set(0, value);
     }
 
     /**
-     * Getter for <code>cloudins.cloudins_user.id</code>.
+     * Getter for <code>cloudins_apm.cloudins_user.id</code>.
      */
     public Long getId() {
         return (Long) get(0);
     }
 
     /**
-     * Setter for <code>cloudins.cloudins_user.role_id</code>.
+     * Setter for <code>cloudins_apm.cloudins_user.role_id</code>.
      */
     public void setRoleId(Long value) {
         set(1, value);
     }
 
     /**
-     * Getter for <code>cloudins.cloudins_user.role_id</code>.
+     * Getter for <code>cloudins_apm.cloudins_user.role_id</code>.
      */
     public Long getRoleId() {
         return (Long) get(1);
     }
 
     /**
-     * Setter for <code>cloudins.cloudins_user.field_id</code>.
+     * Setter for <code>cloudins_apm.cloudins_user.region_id</code>.
      */
-    public void setFieldId(Long value) {
+    public void setRegionId(Long value) {
         set(2, value);
     }
 
     /**
-     * Getter for <code>cloudins.cloudins_user.field_id</code>.
+     * Getter for <code>cloudins_apm.cloudins_user.region_id</code>.
      */
-    public Long getFieldId() {
+    public Long getRegionId() {
         return (Long) get(2);
     }
 
     /**
-     * Setter for <code>cloudins.cloudins_user.account</code>.
+     * Setter for <code>cloudins_apm.cloudins_user.account</code>.
      */
     public void setAccount(String value) {
         set(3, value);
     }
 
     /**
-     * Getter for <code>cloudins.cloudins_user.account</code>.
+     * Getter for <code>cloudins_apm.cloudins_user.account</code>.
      */
     public String getAccount() {
         return (String) get(3);
     }
 
     /**
-     * Setter for <code>cloudins.cloudins_user.name</code>.
+     * Setter for <code>cloudins_apm.cloudins_user.name</code>.
      */
     public void setName(String value) {
         set(4, value);
     }
 
     /**
-     * Getter for <code>cloudins.cloudins_user.name</code>.
+     * Getter for <code>cloudins_apm.cloudins_user.name</code>.
      */
     public String getName() {
         return (String) get(4);
     }
 
     /**
-     * Setter for <code>cloudins.cloudins_user.password</code>.
+     * Setter for <code>cloudins_apm.cloudins_user.password</code>.
      */
     public void setPassword(String value) {
         set(5, value);
     }
 
     /**
-     * Getter for <code>cloudins.cloudins_user.password</code>.
+     * Getter for <code>cloudins_apm.cloudins_user.password</code>.
      */
     public String getPassword() {
         return (String) get(5);
     }
 
     /**
-     * Setter for <code>cloudins.cloudins_user.gender</code>.
+     * Setter for <code>cloudins_apm.cloudins_user.gender</code>.
      */
     public void setGender(Boolean value) {
         set(6, value);
     }
 
     /**
-     * Getter for <code>cloudins.cloudins_user.gender</code>.
+     * Getter for <code>cloudins_apm.cloudins_user.gender</code>.
      */
     public Boolean getGender() {
         return (Boolean) get(6);
     }
 
     /**
-     * Setter for <code>cloudins.cloudins_user.mail</code>.
+     * Setter for <code>cloudins_apm.cloudins_user.mail</code>.
      */
     public void setMail(String value) {
         set(7, value);
     }
 
     /**
-     * Getter for <code>cloudins.cloudins_user.mail</code>.
+     * Getter for <code>cloudins_apm.cloudins_user.mail</code>.
      */
     public String getMail() {
         return (String) get(7);
     }
 
     /**
-     * Setter for <code>cloudins.cloudins_user.company</code>.
+     * Setter for <code>cloudins_apm.cloudins_user.company</code>.
      */
     public void setCompany(String value) {
         set(8, value);
     }
 
     /**
-     * Getter for <code>cloudins.cloudins_user.company</code>.
+     * Getter for <code>cloudins_apm.cloudins_user.company</code>.
      */
     public String getCompany() {
         return (String) get(8);
     }
 
     /**
-     * Setter for <code>cloudins.cloudins_user.phone</code>.
+     * Setter for <code>cloudins_apm.cloudins_user.phone</code>.
      */
     public void setPhone(Long value) {
         set(9, value);
     }
 
     /**
-     * Getter for <code>cloudins.cloudins_user.phone</code>.
+     * Getter for <code>cloudins_apm.cloudins_user.phone</code>.
      */
     public Long getPhone() {
         return (Long) get(9);
     }
 
     /**
-     * Setter for <code>cloudins.cloudins_user.qq</code>.
+     * Setter for <code>cloudins_apm.cloudins_user.qq</code>.
      */
     public void setQq(Long value) {
         set(10, value);
     }
 
     /**
-     * Getter for <code>cloudins.cloudins_user.qq</code>.
+     * Getter for <code>cloudins_apm.cloudins_user.qq</code>.
      */
     public Long getQq() {
         return (Long) get(10);
     }
 
     /**
-     * Setter for <code>cloudins.cloudins_user.status</code>.
+     * Setter for <code>cloudins_apm.cloudins_user.status</code>.
      */
     public void setStatus(String value) {
         set(11, value);
     }
 
     /**
-     * Getter for <code>cloudins.cloudins_user.status</code>.
+     * Getter for <code>cloudins_apm.cloudins_user.status</code>.
      */
     public String getStatus() {
         return (String) get(11);
     }
 
     /**
-     * Setter for <code>cloudins.cloudins_user.remark</code>.
+     * Setter for <code>cloudins_apm.cloudins_user.remark</code>.
      */
     public void setRemark(String value) {
         set(12, value);
     }
 
     /**
-     * Getter for <code>cloudins.cloudins_user.remark</code>.
+     * Getter for <code>cloudins_apm.cloudins_user.remark</code>.
      */
     public String getRemark() {
         return (String) get(12);
@@ -265,7 +265,7 @@ public class CloudinsUserRecord extends UpdatableRecordImpl<CloudinsUserRecord> 
      */
     @Override
     public Field<Long> field3() {
-        return CloudinsUser.CLOUDINS_USER.FIELD_ID;
+        return CloudinsUser.CLOUDINS_USER.REGION_ID;
     }
 
     /**
@@ -369,7 +369,7 @@ public class CloudinsUserRecord extends UpdatableRecordImpl<CloudinsUserRecord> 
      */
     @Override
     public Long value3() {
-        return getFieldId();
+        return getRegionId();
     }
 
     /**
@@ -475,7 +475,7 @@ public class CloudinsUserRecord extends UpdatableRecordImpl<CloudinsUserRecord> 
      */
     @Override
     public CloudinsUserRecord value3(Long value) {
-        setFieldId(value);
+        setRegionId(value);
         return this;
     }
 
@@ -604,12 +604,12 @@ public class CloudinsUserRecord extends UpdatableRecordImpl<CloudinsUserRecord> 
     /**
      * Create a detached, initialised CloudinsUserRecord
      */
-    public CloudinsUserRecord(Long id, Long roleId, Long fieldId, String account, String name, String password, Boolean gender, String mail, String company, Long phone, Long qq, String status, String remark) {
+    public CloudinsUserRecord(Long id, Long roleId, Long regionId, String account, String name, String password, Boolean gender, String mail, String company, Long phone, Long qq, String status, String remark) {
         super(CloudinsUser.CLOUDINS_USER);
 
         set(0, id);
         set(1, roleId);
-        set(2, fieldId);
+        set(2, regionId);
         set(3, account);
         set(4, name);
         set(5, password);

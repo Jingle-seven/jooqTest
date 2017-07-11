@@ -22,11 +22,11 @@ import javax.annotation.Generated;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class CloudinsUser implements Serializable {
 
-    private static final long serialVersionUID = -258034194;
+    private static final long serialVersionUID = -172625746;
 
     private Long    id;
     private Long    roleId;
-    private Long    fieldId;
+    private Long    regionId;
     private String  account;
     private String  name;
     private String  password;
@@ -43,7 +43,7 @@ public class CloudinsUser implements Serializable {
     public CloudinsUser(CloudinsUser value) {
         this.id = value.id;
         this.roleId = value.roleId;
-        this.fieldId = value.fieldId;
+        this.regionId = value.regionId;
         this.account = value.account;
         this.name = value.name;
         this.password = value.password;
@@ -59,7 +59,7 @@ public class CloudinsUser implements Serializable {
     public CloudinsUser(
         Long    id,
         Long    roleId,
-        Long    fieldId,
+        Long    regionId,
         String  account,
         String  name,
         String  password,
@@ -73,7 +73,7 @@ public class CloudinsUser implements Serializable {
     ) {
         this.id = id;
         this.roleId = roleId;
-        this.fieldId = fieldId;
+        this.regionId = regionId;
         this.account = account;
         this.name = name;
         this.password = password;
@@ -102,12 +102,12 @@ public class CloudinsUser implements Serializable {
         this.roleId = roleId;
     }
 
-    public Long getFieldId() {
-        return this.fieldId;
+    public Long getRegionId() {
+        return this.regionId;
     }
 
-    public void setFieldId(Long fieldId) {
-        this.fieldId = fieldId;
+    public void setRegionId(Long regionId) {
+        this.regionId = regionId;
     }
 
     public String getAccount() {
@@ -196,7 +196,7 @@ public class CloudinsUser implements Serializable {
 
         sb.append(id);
         sb.append(", ").append(roleId);
-        sb.append(", ").append(fieldId);
+        sb.append(", ").append(regionId);
         sb.append(", ").append(account);
         sb.append(", ").append(name);
         sb.append(", ").append(password);

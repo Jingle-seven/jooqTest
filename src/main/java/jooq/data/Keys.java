@@ -6,43 +6,43 @@ package jooq.data;
 
 import javax.annotation.Generated;
 
+import jooq.data.tables.AlarmMessage;
 import jooq.data.tables.CloudinsConfig;
-import jooq.data.tables.CloudinsFieldTable;
 import jooq.data.tables.CloudinsLog;
+import jooq.data.tables.CloudinsRegion;
 import jooq.data.tables.CloudinsRole;
+import jooq.data.tables.CloudinsSpanBaseline;
 import jooq.data.tables.CloudinsUser;
-import jooq.data.tables.CloudinsUserFieldAppliTable;
-import jooq.data.tables.HistoricalPeak;
-import jooq.data.tables.JobSummaryBasic;
-import jooq.data.tables.JobTypeSummary;
-import jooq.data.tables.PlayEvolutions;
+import jooq.data.tables.CloudinsUserRegionAppli;
+import jooq.data.tables.ErrorInfo;
+import jooq.data.tables.SpanInfos;
+import jooq.data.tables.SpanTopoTest;
+import jooq.data.tables.Spans;
+import jooq.data.tables.SpansBackup;
+import jooq.data.tables.StatisticsSpans;
 import jooq.data.tables.SysConfigs;
-import jooq.data.tables.UserJobSummary;
-import jooq.data.tables.YarnAppCheckLog;
-import jooq.data.tables.YarnAppCheckSetting;
-import jooq.data.tables.YarnAppHeuristicResult;
-import jooq.data.tables.YarnAppHeuristicResultDetails;
-import jooq.data.tables.YarnAppResult;
+import jooq.data.tables.TraceInfos;
+import jooq.data.tables.Traces;
 import jooq.data.tables.ZipkinAnnotations;
 import jooq.data.tables.ZipkinDependencies;
 import jooq.data.tables.ZipkinSpans;
+import jooq.data.tables.records.AlarmMessageRecord;
 import jooq.data.tables.records.CloudinsConfigRecord;
-import jooq.data.tables.records.CloudinsFieldRecord;
 import jooq.data.tables.records.CloudinsLogRecord;
+import jooq.data.tables.records.CloudinsRegionRecord;
 import jooq.data.tables.records.CloudinsRoleRecord;
-import jooq.data.tables.records.CloudinsUserFieldAppliRecord;
+import jooq.data.tables.records.CloudinsSpanBaselineRecord;
 import jooq.data.tables.records.CloudinsUserRecord;
-import jooq.data.tables.records.HistoricalPeakRecord;
-import jooq.data.tables.records.JobSummaryBasicRecord;
-import jooq.data.tables.records.JobTypeSummaryRecord;
-import jooq.data.tables.records.PlayEvolutionsRecord;
+import jooq.data.tables.records.CloudinsUserRegionAppliRecord;
+import jooq.data.tables.records.ErrorInfoRecord;
+import jooq.data.tables.records.SpanInfosRecord;
+import jooq.data.tables.records.SpanTopoTestRecord;
+import jooq.data.tables.records.SpansBackupRecord;
+import jooq.data.tables.records.SpansRecord;
+import jooq.data.tables.records.StatisticsSpansRecord;
 import jooq.data.tables.records.SysConfigsRecord;
-import jooq.data.tables.records.UserJobSummaryRecord;
-import jooq.data.tables.records.YarnAppCheckLogRecord;
-import jooq.data.tables.records.YarnAppCheckSettingRecord;
-import jooq.data.tables.records.YarnAppHeuristicResultDetailsRecord;
-import jooq.data.tables.records.YarnAppHeuristicResultRecord;
-import jooq.data.tables.records.YarnAppResultRecord;
+import jooq.data.tables.records.TraceInfosRecord;
+import jooq.data.tables.records.TracesRecord;
 import jooq.data.tables.records.ZipkinAnnotationsRecord;
 import jooq.data.tables.records.ZipkinDependenciesRecord;
 import jooq.data.tables.records.ZipkinSpansRecord;
@@ -53,7 +53,7 @@ import org.jooq.impl.AbstractKeys;
 
 
 /**
- * A class modelling foreign key relationships between tables of the <code>cloudins</code> 
+ * A class modelling foreign key relationships between tables of the <code>cloudins_apm</code> 
  * schema
  */
 @Generated(
@@ -70,36 +70,36 @@ public class Keys {
     // IDENTITY definitions
     // -------------------------------------------------------------------------
 
-    public static final Identity<CloudinsFieldRecord, Long> IDENTITY_CLOUDINS_FIELD = Identities0.IDENTITY_CLOUDINS_FIELD;
+    public static final Identity<AlarmMessageRecord, Long> IDENTITY_ALARM_MESSAGE = Identities0.IDENTITY_ALARM_MESSAGE;
     public static final Identity<CloudinsLogRecord, Long> IDENTITY_CLOUDINS_LOG = Identities0.IDENTITY_CLOUDINS_LOG;
+    public static final Identity<CloudinsRegionRecord, Long> IDENTITY_CLOUDINS_REGION = Identities0.IDENTITY_CLOUDINS_REGION;
     public static final Identity<CloudinsRoleRecord, Long> IDENTITY_CLOUDINS_ROLE = Identities0.IDENTITY_CLOUDINS_ROLE;
     public static final Identity<CloudinsUserRecord, Long> IDENTITY_CLOUDINS_USER = Identities0.IDENTITY_CLOUDINS_USER;
-    public static final Identity<CloudinsUserFieldAppliRecord, Long> IDENTITY_CLOUDINS_USER_FIELD_APPLI = Identities0.IDENTITY_CLOUDINS_USER_FIELD_APPLI;
-    public static final Identity<YarnAppCheckLogRecord, Long> IDENTITY_YARN_APP_CHECK_LOG = Identities0.IDENTITY_YARN_APP_CHECK_LOG;
-    public static final Identity<YarnAppCheckSettingRecord, Long> IDENTITY_YARN_APP_CHECK_SETTING = Identities0.IDENTITY_YARN_APP_CHECK_SETTING;
-    public static final Identity<YarnAppHeuristicResultRecord, Integer> IDENTITY_YARN_APP_HEURISTIC_RESULT = Identities0.IDENTITY_YARN_APP_HEURISTIC_RESULT;
+    public static final Identity<CloudinsUserRegionAppliRecord, Long> IDENTITY_CLOUDINS_USER_REGION_APPLI = Identities0.IDENTITY_CLOUDINS_USER_REGION_APPLI;
 
     // -------------------------------------------------------------------------
     // UNIQUE and PRIMARY KEY definitions
     // -------------------------------------------------------------------------
 
+    public static final UniqueKey<AlarmMessageRecord> KEY_ALARM_MESSAGE_PRIMARY = UniqueKeys0.KEY_ALARM_MESSAGE_PRIMARY;
     public static final UniqueKey<CloudinsConfigRecord> KEY_CLOUDINS_CONFIG_PRIMARY = UniqueKeys0.KEY_CLOUDINS_CONFIG_PRIMARY;
-    public static final UniqueKey<CloudinsFieldRecord> KEY_CLOUDINS_FIELD_PRIMARY = UniqueKeys0.KEY_CLOUDINS_FIELD_PRIMARY;
     public static final UniqueKey<CloudinsLogRecord> KEY_CLOUDINS_LOG_PRIMARY = UniqueKeys0.KEY_CLOUDINS_LOG_PRIMARY;
+    public static final UniqueKey<CloudinsRegionRecord> KEY_CLOUDINS_REGION_PRIMARY = UniqueKeys0.KEY_CLOUDINS_REGION_PRIMARY;
     public static final UniqueKey<CloudinsRoleRecord> KEY_CLOUDINS_ROLE_PRIMARY = UniqueKeys0.KEY_CLOUDINS_ROLE_PRIMARY;
+    public static final UniqueKey<CloudinsSpanBaselineRecord> KEY_CLOUDINS_SPAN_BASELINE_PRIMARY = UniqueKeys0.KEY_CLOUDINS_SPAN_BASELINE_PRIMARY;
+    public static final UniqueKey<CloudinsSpanBaselineRecord> KEY_CLOUDINS_SPAN_BASELINE_TRACE_ID = UniqueKeys0.KEY_CLOUDINS_SPAN_BASELINE_TRACE_ID;
     public static final UniqueKey<CloudinsUserRecord> KEY_CLOUDINS_USER_PRIMARY = UniqueKeys0.KEY_CLOUDINS_USER_PRIMARY;
-    public static final UniqueKey<CloudinsUserFieldAppliRecord> KEY_CLOUDINS_USER_FIELD_APPLI_PRIMARY = UniqueKeys0.KEY_CLOUDINS_USER_FIELD_APPLI_PRIMARY;
-    public static final UniqueKey<HistoricalPeakRecord> KEY_HISTORICAL_PEAK_PRIMARY = UniqueKeys0.KEY_HISTORICAL_PEAK_PRIMARY;
-    public static final UniqueKey<JobSummaryBasicRecord> KEY_JOB_SUMMARY_BASIC_PRIMARY = UniqueKeys0.KEY_JOB_SUMMARY_BASIC_PRIMARY;
-    public static final UniqueKey<JobTypeSummaryRecord> KEY_JOB_TYPE_SUMMARY_PRIMARY = UniqueKeys0.KEY_JOB_TYPE_SUMMARY_PRIMARY;
-    public static final UniqueKey<PlayEvolutionsRecord> KEY_PLAY_EVOLUTIONS_PRIMARY = UniqueKeys0.KEY_PLAY_EVOLUTIONS_PRIMARY;
+    public static final UniqueKey<CloudinsUserRegionAppliRecord> KEY_CLOUDINS_USER_REGION_APPLI_PRIMARY = UniqueKeys0.KEY_CLOUDINS_USER_REGION_APPLI_PRIMARY;
+    public static final UniqueKey<ErrorInfoRecord> KEY_ERROR_INFO_PRIMARY = UniqueKeys0.KEY_ERROR_INFO_PRIMARY;
+    public static final UniqueKey<ErrorInfoRecord> KEY_ERROR_INFO_TRACE_ID = UniqueKeys0.KEY_ERROR_INFO_TRACE_ID;
+    public static final UniqueKey<SpansRecord> KEY_SPANS_PRIMARY = UniqueKeys0.KEY_SPANS_PRIMARY;
+    public static final UniqueKey<SpansBackupRecord> KEY_SPANS_BACKUP_PRIMARY = UniqueKeys0.KEY_SPANS_BACKUP_PRIMARY;
+    public static final UniqueKey<SpanInfosRecord> KEY_SPAN_INFOS_PRIMARY = UniqueKeys0.KEY_SPAN_INFOS_PRIMARY;
+    public static final UniqueKey<SpanTopoTestRecord> KEY_SPAN_TOPO_TEST_PRIMARY = UniqueKeys0.KEY_SPAN_TOPO_TEST_PRIMARY;
+    public static final UniqueKey<StatisticsSpansRecord> KEY_STATISTICS_SPANS_PRIMARY = UniqueKeys0.KEY_STATISTICS_SPANS_PRIMARY;
     public static final UniqueKey<SysConfigsRecord> KEY_SYS_CONFIGS_PRIMARY = UniqueKeys0.KEY_SYS_CONFIGS_PRIMARY;
-    public static final UniqueKey<UserJobSummaryRecord> KEY_USER_JOB_SUMMARY_PRIMARY = UniqueKeys0.KEY_USER_JOB_SUMMARY_PRIMARY;
-    public static final UniqueKey<YarnAppCheckLogRecord> KEY_YARN_APP_CHECK_LOG_PRIMARY = UniqueKeys0.KEY_YARN_APP_CHECK_LOG_PRIMARY;
-    public static final UniqueKey<YarnAppCheckSettingRecord> KEY_YARN_APP_CHECK_SETTING_PRIMARY = UniqueKeys0.KEY_YARN_APP_CHECK_SETTING_PRIMARY;
-    public static final UniqueKey<YarnAppHeuristicResultRecord> KEY_YARN_APP_HEURISTIC_RESULT_PRIMARY = UniqueKeys0.KEY_YARN_APP_HEURISTIC_RESULT_PRIMARY;
-    public static final UniqueKey<YarnAppHeuristicResultDetailsRecord> KEY_YARN_APP_HEURISTIC_RESULT_DETAILS_PRIMARY = UniqueKeys0.KEY_YARN_APP_HEURISTIC_RESULT_DETAILS_PRIMARY;
-    public static final UniqueKey<YarnAppResultRecord> KEY_YARN_APP_RESULT_PRIMARY = UniqueKeys0.KEY_YARN_APP_RESULT_PRIMARY;
+    public static final UniqueKey<TracesRecord> KEY_TRACES_PRIMARY = UniqueKeys0.KEY_TRACES_PRIMARY;
+    public static final UniqueKey<TraceInfosRecord> KEY_TRACE_INFOS_PRIMARY = UniqueKeys0.KEY_TRACE_INFOS_PRIMARY;
     public static final UniqueKey<ZipkinAnnotationsRecord> KEY_ZIPKIN_ANNOTATIONS_TRACE_ID = UniqueKeys0.KEY_ZIPKIN_ANNOTATIONS_TRACE_ID;
     public static final UniqueKey<ZipkinDependenciesRecord> KEY_ZIPKIN_DEPENDENCIES_DAY = UniqueKeys0.KEY_ZIPKIN_DEPENDENCIES_DAY;
     public static final UniqueKey<ZipkinSpansRecord> KEY_ZIPKIN_SPANS_TRACE_ID = UniqueKeys0.KEY_ZIPKIN_SPANS_TRACE_ID;
@@ -114,34 +114,34 @@ public class Keys {
     // -------------------------------------------------------------------------
 
     private static class Identities0 extends AbstractKeys {
-        public static Identity<CloudinsFieldRecord, Long> IDENTITY_CLOUDINS_FIELD = createIdentity(CloudinsFieldTable.CLOUDINS_FIELD, CloudinsFieldTable.CLOUDINS_FIELD.ID);
+        public static Identity<AlarmMessageRecord, Long> IDENTITY_ALARM_MESSAGE = createIdentity(AlarmMessage.ALARM_MESSAGE, AlarmMessage.ALARM_MESSAGE.ID);
         public static Identity<CloudinsLogRecord, Long> IDENTITY_CLOUDINS_LOG = createIdentity(CloudinsLog.CLOUDINS_LOG, CloudinsLog.CLOUDINS_LOG.ID);
+        public static Identity<CloudinsRegionRecord, Long> IDENTITY_CLOUDINS_REGION = createIdentity(CloudinsRegion.CLOUDINS_REGION, CloudinsRegion.CLOUDINS_REGION.ID);
         public static Identity<CloudinsRoleRecord, Long> IDENTITY_CLOUDINS_ROLE = createIdentity(CloudinsRole.CLOUDINS_ROLE, CloudinsRole.CLOUDINS_ROLE.ID);
         public static Identity<CloudinsUserRecord, Long> IDENTITY_CLOUDINS_USER = createIdentity(CloudinsUser.CLOUDINS_USER, CloudinsUser.CLOUDINS_USER.ID);
-        public static Identity<CloudinsUserFieldAppliRecord, Long> IDENTITY_CLOUDINS_USER_FIELD_APPLI = createIdentity(CloudinsUserFieldAppliTable.CLOUDINS_USER_FIELD_APPLI, CloudinsUserFieldAppliTable.CLOUDINS_USER_FIELD_APPLI.ID);
-        public static Identity<YarnAppCheckLogRecord, Long> IDENTITY_YARN_APP_CHECK_LOG = createIdentity(YarnAppCheckLog.YARN_APP_CHECK_LOG, YarnAppCheckLog.YARN_APP_CHECK_LOG.ID);
-        public static Identity<YarnAppCheckSettingRecord, Long> IDENTITY_YARN_APP_CHECK_SETTING = createIdentity(YarnAppCheckSetting.YARN_APP_CHECK_SETTING, YarnAppCheckSetting.YARN_APP_CHECK_SETTING.ID);
-        public static Identity<YarnAppHeuristicResultRecord, Integer> IDENTITY_YARN_APP_HEURISTIC_RESULT = createIdentity(YarnAppHeuristicResult.YARN_APP_HEURISTIC_RESULT, YarnAppHeuristicResult.YARN_APP_HEURISTIC_RESULT.ID);
+        public static Identity<CloudinsUserRegionAppliRecord, Long> IDENTITY_CLOUDINS_USER_REGION_APPLI = createIdentity(CloudinsUserRegionAppli.CLOUDINS_USER_REGION_APPLI, CloudinsUserRegionAppli.CLOUDINS_USER_REGION_APPLI.ID);
     }
 
     private static class UniqueKeys0 extends AbstractKeys {
+        public static final UniqueKey<AlarmMessageRecord> KEY_ALARM_MESSAGE_PRIMARY = createUniqueKey(AlarmMessage.ALARM_MESSAGE, "KEY_alarm_message_PRIMARY", AlarmMessage.ALARM_MESSAGE.ID);
         public static final UniqueKey<CloudinsConfigRecord> KEY_CLOUDINS_CONFIG_PRIMARY = createUniqueKey(CloudinsConfig.CLOUDINS_CONFIG, "KEY_cloudins_config_PRIMARY", CloudinsConfig.CLOUDINS_CONFIG.ID);
-        public static final UniqueKey<CloudinsFieldRecord> KEY_CLOUDINS_FIELD_PRIMARY = createUniqueKey(CloudinsFieldTable.CLOUDINS_FIELD, "KEY_cloudins_field_PRIMARY", CloudinsFieldTable.CLOUDINS_FIELD.ID);
         public static final UniqueKey<CloudinsLogRecord> KEY_CLOUDINS_LOG_PRIMARY = createUniqueKey(CloudinsLog.CLOUDINS_LOG, "KEY_cloudins_log_PRIMARY", CloudinsLog.CLOUDINS_LOG.ID);
+        public static final UniqueKey<CloudinsRegionRecord> KEY_CLOUDINS_REGION_PRIMARY = createUniqueKey(CloudinsRegion.CLOUDINS_REGION, "KEY_cloudins_region_PRIMARY", CloudinsRegion.CLOUDINS_REGION.ID);
         public static final UniqueKey<CloudinsRoleRecord> KEY_CLOUDINS_ROLE_PRIMARY = createUniqueKey(CloudinsRole.CLOUDINS_ROLE, "KEY_cloudins_role_PRIMARY", CloudinsRole.CLOUDINS_ROLE.ID);
+        public static final UniqueKey<CloudinsSpanBaselineRecord> KEY_CLOUDINS_SPAN_BASELINE_PRIMARY = createUniqueKey(CloudinsSpanBaseline.CLOUDINS_SPAN_BASELINE, "KEY_cloudins_span_baseline_PRIMARY", CloudinsSpanBaseline.CLOUDINS_SPAN_BASELINE.TRACE_ID, CloudinsSpanBaseline.CLOUDINS_SPAN_BASELINE.ID);
+        public static final UniqueKey<CloudinsSpanBaselineRecord> KEY_CLOUDINS_SPAN_BASELINE_TRACE_ID = createUniqueKey(CloudinsSpanBaseline.CLOUDINS_SPAN_BASELINE, "KEY_cloudins_span_baseline_trace_id", CloudinsSpanBaseline.CLOUDINS_SPAN_BASELINE.TRACE_ID, CloudinsSpanBaseline.CLOUDINS_SPAN_BASELINE.ID);
         public static final UniqueKey<CloudinsUserRecord> KEY_CLOUDINS_USER_PRIMARY = createUniqueKey(CloudinsUser.CLOUDINS_USER, "KEY_cloudins_user_PRIMARY", CloudinsUser.CLOUDINS_USER.ID);
-        public static final UniqueKey<CloudinsUserFieldAppliRecord> KEY_CLOUDINS_USER_FIELD_APPLI_PRIMARY = createUniqueKey(CloudinsUserFieldAppliTable.CLOUDINS_USER_FIELD_APPLI, "KEY_cloudins_user_field_appli_PRIMARY", CloudinsUserFieldAppliTable.CLOUDINS_USER_FIELD_APPLI.ID);
-        public static final UniqueKey<HistoricalPeakRecord> KEY_HISTORICAL_PEAK_PRIMARY = createUniqueKey(HistoricalPeak.HISTORICAL_PEAK, "KEY_historical_peak_PRIMARY", HistoricalPeak.HISTORICAL_PEAK.ID);
-        public static final UniqueKey<JobSummaryBasicRecord> KEY_JOB_SUMMARY_BASIC_PRIMARY = createUniqueKey(JobSummaryBasic.JOB_SUMMARY_BASIC, "KEY_job_summary_basic_PRIMARY", JobSummaryBasic.JOB_SUMMARY_BASIC.ID);
-        public static final UniqueKey<JobTypeSummaryRecord> KEY_JOB_TYPE_SUMMARY_PRIMARY = createUniqueKey(JobTypeSummary.JOB_TYPE_SUMMARY, "KEY_job_type_summary_PRIMARY", JobTypeSummary.JOB_TYPE_SUMMARY.ID);
-        public static final UniqueKey<PlayEvolutionsRecord> KEY_PLAY_EVOLUTIONS_PRIMARY = createUniqueKey(PlayEvolutions.PLAY_EVOLUTIONS, "KEY_play_evolutions_PRIMARY", PlayEvolutions.PLAY_EVOLUTIONS.ID);
+        public static final UniqueKey<CloudinsUserRegionAppliRecord> KEY_CLOUDINS_USER_REGION_APPLI_PRIMARY = createUniqueKey(CloudinsUserRegionAppli.CLOUDINS_USER_REGION_APPLI, "KEY_cloudins_user_region_appli_PRIMARY", CloudinsUserRegionAppli.CLOUDINS_USER_REGION_APPLI.ID);
+        public static final UniqueKey<ErrorInfoRecord> KEY_ERROR_INFO_PRIMARY = createUniqueKey(ErrorInfo.ERROR_INFO, "KEY_error_info_PRIMARY", ErrorInfo.ERROR_INFO.TRACE_ID, ErrorInfo.ERROR_INFO.SPAN_ID);
+        public static final UniqueKey<ErrorInfoRecord> KEY_ERROR_INFO_TRACE_ID = createUniqueKey(ErrorInfo.ERROR_INFO, "KEY_error_info_trace_id", ErrorInfo.ERROR_INFO.TRACE_ID, ErrorInfo.ERROR_INFO.SPAN_ID, ErrorInfo.ERROR_INFO.A_KEY, ErrorInfo.ERROR_INFO.A_TIMESTAMP);
+        public static final UniqueKey<SpansRecord> KEY_SPANS_PRIMARY = createUniqueKey(Spans.SPANS, "KEY_spans_PRIMARY", Spans.SPANS.TRACE_ID, Spans.SPANS.SPAN_ID);
+        public static final UniqueKey<SpansBackupRecord> KEY_SPANS_BACKUP_PRIMARY = createUniqueKey(SpansBackup.SPANS_BACKUP, "KEY_spans_backup_PRIMARY", SpansBackup.SPANS_BACKUP.TRACE_ID, SpansBackup.SPANS_BACKUP.SPAN_ID);
+        public static final UniqueKey<SpanInfosRecord> KEY_SPAN_INFOS_PRIMARY = createUniqueKey(SpanInfos.SPAN_INFOS, "KEY_span_infos_PRIMARY", SpanInfos.SPAN_INFOS.NAME);
+        public static final UniqueKey<SpanTopoTestRecord> KEY_SPAN_TOPO_TEST_PRIMARY = createUniqueKey(SpanTopoTest.SPAN_TOPO_TEST, "KEY_span_topo_test_PRIMARY", SpanTopoTest.SPAN_TOPO_TEST.TRACE_ID, SpanTopoTest.SPAN_TOPO_TEST.SPAN_ID);
+        public static final UniqueKey<StatisticsSpansRecord> KEY_STATISTICS_SPANS_PRIMARY = createUniqueKey(StatisticsSpans.STATISTICS_SPANS, "KEY_statistics_spans_PRIMARY", StatisticsSpans.STATISTICS_SPANS.ID);
         public static final UniqueKey<SysConfigsRecord> KEY_SYS_CONFIGS_PRIMARY = createUniqueKey(SysConfigs.SYS_CONFIGS, "KEY_sys_configs_PRIMARY", SysConfigs.SYS_CONFIGS.CONFIG_NAME);
-        public static final UniqueKey<UserJobSummaryRecord> KEY_USER_JOB_SUMMARY_PRIMARY = createUniqueKey(UserJobSummary.USER_JOB_SUMMARY, "KEY_user_job_summary_PRIMARY", UserJobSummary.USER_JOB_SUMMARY.ID);
-        public static final UniqueKey<YarnAppCheckLogRecord> KEY_YARN_APP_CHECK_LOG_PRIMARY = createUniqueKey(YarnAppCheckLog.YARN_APP_CHECK_LOG, "KEY_yarn_app_check_log_PRIMARY", YarnAppCheckLog.YARN_APP_CHECK_LOG.ID);
-        public static final UniqueKey<YarnAppCheckSettingRecord> KEY_YARN_APP_CHECK_SETTING_PRIMARY = createUniqueKey(YarnAppCheckSetting.YARN_APP_CHECK_SETTING, "KEY_yarn_app_check_setting_PRIMARY", YarnAppCheckSetting.YARN_APP_CHECK_SETTING.ID);
-        public static final UniqueKey<YarnAppHeuristicResultRecord> KEY_YARN_APP_HEURISTIC_RESULT_PRIMARY = createUniqueKey(YarnAppHeuristicResult.YARN_APP_HEURISTIC_RESULT, "KEY_yarn_app_heuristic_result_PRIMARY", YarnAppHeuristicResult.YARN_APP_HEURISTIC_RESULT.ID);
-        public static final UniqueKey<YarnAppHeuristicResultDetailsRecord> KEY_YARN_APP_HEURISTIC_RESULT_DETAILS_PRIMARY = createUniqueKey(YarnAppHeuristicResultDetails.YARN_APP_HEURISTIC_RESULT_DETAILS, "KEY_yarn_app_heuristic_result_details_PRIMARY", YarnAppHeuristicResultDetails.YARN_APP_HEURISTIC_RESULT_DETAILS.YARN_APP_HEURISTIC_RESULT_ID, YarnAppHeuristicResultDetails.YARN_APP_HEURISTIC_RESULT_DETAILS.NAME);
-        public static final UniqueKey<YarnAppResultRecord> KEY_YARN_APP_RESULT_PRIMARY = createUniqueKey(YarnAppResult.YARN_APP_RESULT, "KEY_yarn_app_result_PRIMARY", YarnAppResult.YARN_APP_RESULT.ID);
+        public static final UniqueKey<TracesRecord> KEY_TRACES_PRIMARY = createUniqueKey(Traces.TRACES, "KEY_traces_PRIMARY", Traces.TRACES.TRACE_ID);
+        public static final UniqueKey<TraceInfosRecord> KEY_TRACE_INFOS_PRIMARY = createUniqueKey(TraceInfos.TRACE_INFOS, "KEY_trace_infos_PRIMARY", TraceInfos.TRACE_INFOS.TRACE_MD5);
         public static final UniqueKey<ZipkinAnnotationsRecord> KEY_ZIPKIN_ANNOTATIONS_TRACE_ID = createUniqueKey(ZipkinAnnotations.ZIPKIN_ANNOTATIONS, "KEY_zipkin_annotations_trace_id", ZipkinAnnotations.ZIPKIN_ANNOTATIONS.TRACE_ID, ZipkinAnnotations.ZIPKIN_ANNOTATIONS.SPAN_ID, ZipkinAnnotations.ZIPKIN_ANNOTATIONS.A_KEY, ZipkinAnnotations.ZIPKIN_ANNOTATIONS.A_TIMESTAMP);
         public static final UniqueKey<ZipkinDependenciesRecord> KEY_ZIPKIN_DEPENDENCIES_DAY = createUniqueKey(ZipkinDependencies.ZIPKIN_DEPENDENCIES, "KEY_zipkin_dependencies_day", ZipkinDependencies.ZIPKIN_DEPENDENCIES.DAY, ZipkinDependencies.ZIPKIN_DEPENDENCIES.PARENT, ZipkinDependencies.ZIPKIN_DEPENDENCIES.CHILD);
         public static final UniqueKey<ZipkinSpansRecord> KEY_ZIPKIN_SPANS_TRACE_ID = createUniqueKey(ZipkinSpans.ZIPKIN_SPANS, "KEY_zipkin_spans_trace_id", ZipkinSpans.ZIPKIN_SPANS.TRACE_ID, ZipkinSpans.ZIPKIN_SPANS.ID);

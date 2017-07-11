@@ -28,115 +28,115 @@ import org.jooq.impl.UpdatableRecordImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class CloudinsLogRecord extends UpdatableRecordImpl<CloudinsLogRecord> implements Record8<Long, String, String, String, String, Integer, Boolean, Boolean> {
 
-    private static final long serialVersionUID = 468263017;
+    private static final long serialVersionUID = -139307581;
 
     /**
-     * Setter for <code>cloudins.cloudins_log.id</code>.
+     * Setter for <code>cloudins_apm.cloudins_log.id</code>.
      */
     public void setId(Long value) {
         set(0, value);
     }
 
     /**
-     * Getter for <code>cloudins.cloudins_log.id</code>.
+     * Getter for <code>cloudins_apm.cloudins_log.id</code>.
      */
     public Long getId() {
         return (Long) get(0);
     }
 
     /**
-     * Setter for <code>cloudins.cloudins_log.level</code>.
+     * Setter for <code>cloudins_apm.cloudins_log.level</code>.
      */
     public void setLevel(String value) {
         set(1, value);
     }
 
     /**
-     * Getter for <code>cloudins.cloudins_log.level</code>.
+     * Getter for <code>cloudins_apm.cloudins_log.level</code>.
      */
     public String getLevel() {
         return (String) get(1);
     }
 
     /**
-     * Setter for <code>cloudins.cloudins_log.method</code>.
+     * Setter for <code>cloudins_apm.cloudins_log.method</code>.
      */
     public void setMethod(String value) {
         set(2, value);
     }
 
     /**
-     * Getter for <code>cloudins.cloudins_log.method</code>.
+     * Getter for <code>cloudins_apm.cloudins_log.method</code>.
      */
     public String getMethod() {
         return (String) get(2);
     }
 
     /**
-     * Setter for <code>cloudins.cloudins_log.message</code>.
+     * Setter for <code>cloudins_apm.cloudins_log.message</code>.
      */
     public void setMessage(String value) {
         set(3, value);
     }
 
     /**
-     * Getter for <code>cloudins.cloudins_log.message</code>.
+     * Getter for <code>cloudins_apm.cloudins_log.message</code>.
      */
     public String getMessage() {
         return (String) get(3);
     }
 
     /**
-     * Setter for <code>cloudins.cloudins_log.time</code>.
+     * Setter for <code>cloudins_apm.cloudins_log.time</code>.
      */
     public void setTime(String value) {
         set(4, value);
     }
 
     /**
-     * Getter for <code>cloudins.cloudins_log.time</code>.
+     * Getter for <code>cloudins_apm.cloudins_log.time</code>.
      */
     public String getTime() {
         return (String) get(4);
     }
 
     /**
-     * Setter for <code>cloudins.cloudins_log.line</code>.
+     * Setter for <code>cloudins_apm.cloudins_log.line</code>.
      */
     public void setLine(Integer value) {
         set(5, value);
     }
 
     /**
-     * Getter for <code>cloudins.cloudins_log.line</code>.
+     * Getter for <code>cloudins_apm.cloudins_log.line</code>.
      */
     public Integer getLine() {
         return (Integer) get(5);
     }
 
     /**
-     * Setter for <code>cloudins.cloudins_log.displayed</code>.
+     * Setter for <code>cloudins_apm.cloudins_log.displayed</code>.
      */
     public void setDisplayed(Boolean value) {
         set(6, value);
     }
 
     /**
-     * Getter for <code>cloudins.cloudins_log.displayed</code>.
+     * Getter for <code>cloudins_apm.cloudins_log.displayed</code>.
      */
     public Boolean getDisplayed() {
         return (Boolean) get(6);
     }
 
     /**
-     * Setter for <code>cloudins.cloudins_log.isread</code>.
+     * Setter for <code>cloudins_apm.cloudins_log.isread</code>.
      */
     public void setIsread(Boolean value) {
         set(7, value);
     }
 
     /**
-     * Getter for <code>cloudins.cloudins_log.isread</code>.
+     * Getter for <code>cloudins_apm.cloudins_log.isread</code>.
      */
     public Boolean getIsread() {
         return (Boolean) get(7);

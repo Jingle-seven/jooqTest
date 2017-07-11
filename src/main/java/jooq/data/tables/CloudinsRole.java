@@ -9,7 +9,7 @@ import java.util.List;
 
 import javax.annotation.Generated;
 
-import jooq.data.Cloudins;
+import jooq.data.CloudinsApm;
 import jooq.data.Keys;
 import jooq.data.tables.records.CloudinsRoleRecord;
 
@@ -35,10 +35,10 @@ import org.jooq.impl.TableImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class CloudinsRole extends TableImpl<CloudinsRoleRecord> {
 
-    private static final long serialVersionUID = 1021114240;
+    private static final long serialVersionUID = 501098223;
 
     /**
-     * The reference instance of <code>cloudins.cloudins_role</code>
+     * The reference instance of <code>cloudins_apm.cloudins_role</code>
      */
     public static final CloudinsRole CLOUDINS_ROLE = new CloudinsRole();
 
@@ -51,34 +51,34 @@ public class CloudinsRole extends TableImpl<CloudinsRoleRecord> {
     }
 
     /**
-     * The column <code>cloudins.cloudins_role.id</code>.
+     * The column <code>cloudins_apm.cloudins_role.id</code>.
      */
-    public final TableField<CloudinsRoleRecord, Integer> ID = createField("id", org.jooq.impl.SQLDataType.INTEGER.nullable(false), this, "");
+    public final TableField<CloudinsRoleRecord, Long> ID = createField("id", org.jooq.impl.SQLDataType.BIGINT.nullable(false), this, "");
 
     /**
-     * The column <code>cloudins.cloudins_role.name</code>.
+     * The column <code>cloudins_apm.cloudins_role.name</code>.
      */
     public final TableField<CloudinsRoleRecord, String> NAME = createField("name", org.jooq.impl.SQLDataType.VARCHAR.length(255).nullable(false).defaultValue(org.jooq.impl.DSL.inline("", org.jooq.impl.SQLDataType.VARCHAR)), this, "");
 
     /**
-     * The column <code>cloudins.cloudins_role.auth</code>.
+     * The column <code>cloudins_apm.cloudins_role.auth</code>.
      */
     public final TableField<CloudinsRoleRecord, String> AUTH = createField("auth", org.jooq.impl.SQLDataType.VARCHAR.length(255).nullable(false).defaultValue(org.jooq.impl.DSL.inline("", org.jooq.impl.SQLDataType.VARCHAR)), this, "");
 
     /**
-     * The column <code>cloudins.cloudins_role.remark</code>.
+     * The column <code>cloudins_apm.cloudins_role.remark</code>.
      */
-    public final TableField<CloudinsRoleRecord, String> REMARK = createField("remark", org.jooq.impl.SQLDataType.VARCHAR.length(255), this, "");
+    public final TableField<CloudinsRoleRecord, String> REMARK = createField("remark", org.jooq.impl.SQLDataType.VARCHAR.length(255).nullable(false).defaultValue(org.jooq.impl.DSL.inline("", org.jooq.impl.SQLDataType.VARCHAR)), this, "");
 
     /**
-     * Create a <code>cloudins.cloudins_role</code> table reference
+     * Create a <code>cloudins_apm.cloudins_role</code> table reference
      */
     public CloudinsRole() {
         this("cloudins_role", null);
     }
 
     /**
-     * Create an aliased <code>cloudins.cloudins_role</code> table reference
+     * Create an aliased <code>cloudins_apm.cloudins_role</code> table reference
      */
     public CloudinsRole(String alias) {
         this(alias, CLOUDINS_ROLE);
@@ -97,14 +97,14 @@ public class CloudinsRole extends TableImpl<CloudinsRoleRecord> {
      */
     @Override
     public Schema getSchema() {
-        return Cloudins.CLOUDINS;
+        return CloudinsApm.CLOUDINS_APM;
     }
 
     /**
      * {@inheritDoc}
      */
     @Override
-    public Identity<CloudinsRoleRecord, Integer> getIdentity() {
+    public Identity<CloudinsRoleRecord, Long> getIdentity() {
         return Keys.IDENTITY_CLOUDINS_ROLE;
     }
 

@@ -9,7 +9,7 @@ import java.util.List;
 
 import javax.annotation.Generated;
 
-import jooq.data.Cloudins;
+import jooq.data.CloudinsApm;
 import jooq.data.Keys;
 import jooq.data.tables.records.CloudinsConfigRecord;
 
@@ -34,10 +34,10 @@ import org.jooq.impl.TableImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class CloudinsConfig extends TableImpl<CloudinsConfigRecord> {
 
-    private static final long serialVersionUID = 1042426729;
+    private static final long serialVersionUID = -811014143;
 
     /**
-     * The reference instance of <code>cloudins.cloudins_config</code>
+     * The reference instance of <code>cloudins_apm.cloudins_config</code>
      */
     public static final CloudinsConfig CLOUDINS_CONFIG = new CloudinsConfig();
 
@@ -50,54 +50,54 @@ public class CloudinsConfig extends TableImpl<CloudinsConfigRecord> {
     }
 
     /**
-     * The column <code>cloudins.cloudins_config.id</code>.
+     * The column <code>cloudins_apm.cloudins_config.id</code>.
      */
     public final TableField<CloudinsConfigRecord, Long> ID = createField("id", org.jooq.impl.SQLDataType.BIGINT.nullable(false).defaultValue(org.jooq.impl.DSL.inline("0", org.jooq.impl.SQLDataType.BIGINT)), this, "");
 
     /**
-     * The column <code>cloudins.cloudins_config.product</code>. cloudins产品名称，如generater、analyzer等
+     * The column <code>cloudins_apm.cloudins_config.product</code>. cloudins产品名称，如generater、analyzer等
      */
     public final TableField<CloudinsConfigRecord, String> PRODUCT = createField("product", org.jooq.impl.SQLDataType.VARCHAR.length(45), this, "cloudins产品名称，如generater、analyzer等");
 
     /**
-     * The column <code>cloudins.cloudins_config.module</code>. config中的分类，如db, parameter,connection等
+     * The column <code>cloudins_apm.cloudins_config.module</code>. config中的分类，如db, parameter,connection等
      */
     public final TableField<CloudinsConfigRecord, String> MODULE = createField("module", org.jooq.impl.SQLDataType.VARCHAR.length(45), this, "config中的分类，如db, parameter,connection等");
 
     /**
-     * The column <code>cloudins.cloudins_config.parm_alias</code>.
+     * The column <code>cloudins_apm.cloudins_config.parm_alias</code>.
      */
     public final TableField<CloudinsConfigRecord, String> PARM_ALIAS = createField("parm_alias", org.jooq.impl.SQLDataType.VARCHAR.length(45), this, "");
 
     /**
-     * The column <code>cloudins.cloudins_config.parm_name</code>.
+     * The column <code>cloudins_apm.cloudins_config.parm_name</code>.
      */
     public final TableField<CloudinsConfigRecord, String> PARM_NAME = createField("parm_name", org.jooq.impl.SQLDataType.VARCHAR.length(45), this, "");
 
     /**
-     * The column <code>cloudins.cloudins_config.parm_value</code>.
+     * The column <code>cloudins_apm.cloudins_config.parm_value</code>.
      */
     public final TableField<CloudinsConfigRecord, String> PARM_VALUE = createField("parm_value", org.jooq.impl.SQLDataType.VARCHAR.length(45), this, "");
 
     /**
-     * The column <code>cloudins.cloudins_config.flag</code>. 预留字段
+     * The column <code>cloudins_apm.cloudins_config.flag</code>. 预留字段
      */
     public final TableField<CloudinsConfigRecord, Integer> FLAG = createField("flag", org.jooq.impl.SQLDataType.INTEGER, this, "预留字段");
 
     /**
-     * The column <code>cloudins.cloudins_config.comment</code>.
+     * The column <code>cloudins_apm.cloudins_config.comment</code>.
      */
     public final TableField<CloudinsConfigRecord, String> COMMENT = createField("comment", org.jooq.impl.SQLDataType.VARCHAR.length(45), this, "");
 
     /**
-     * Create a <code>cloudins.cloudins_config</code> table reference
+     * Create a <code>cloudins_apm.cloudins_config</code> table reference
      */
     public CloudinsConfig() {
         this("cloudins_config", null);
     }
 
     /**
-     * Create an aliased <code>cloudins.cloudins_config</code> table reference
+     * Create an aliased <code>cloudins_apm.cloudins_config</code> table reference
      */
     public CloudinsConfig(String alias) {
         this(alias, CLOUDINS_CONFIG);
@@ -116,7 +116,7 @@ public class CloudinsConfig extends TableImpl<CloudinsConfigRecord> {
      */
     @Override
     public Schema getSchema() {
-        return Cloudins.CLOUDINS;
+        return CloudinsApm.CLOUDINS_APM;
     }
 
     /**

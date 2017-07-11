@@ -9,7 +9,7 @@ import java.util.List;
 
 import javax.annotation.Generated;
 
-import jooq.data.Cloudins;
+import jooq.data.CloudinsApm;
 import jooq.data.Keys;
 import jooq.data.tables.records.ZipkinSpansRecord;
 
@@ -34,10 +34,10 @@ import org.jooq.impl.TableImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class ZipkinSpans extends TableImpl<ZipkinSpansRecord> {
 
-    private static final long serialVersionUID = 380418859;
+    private static final long serialVersionUID = 1968077317;
 
     /**
-     * The reference instance of <code>cloudins.zipkin_spans</code>
+     * The reference instance of <code>cloudins_apm.zipkin_spans</code>
      */
     public static final ZipkinSpans ZIPKIN_SPANS = new ZipkinSpans();
 
@@ -50,49 +50,54 @@ public class ZipkinSpans extends TableImpl<ZipkinSpansRecord> {
     }
 
     /**
-     * The column <code>cloudins.zipkin_spans.trace_id</code>.
+     * The column <code>cloudins_apm.zipkin_spans.trace_id</code>.
      */
     public final TableField<ZipkinSpansRecord, Long> TRACE_ID = createField("trace_id", org.jooq.impl.SQLDataType.BIGINT.nullable(false), this, "");
 
     /**
-     * The column <code>cloudins.zipkin_spans.id</code>.
+     * The column <code>cloudins_apm.zipkin_spans.id</code>.
      */
     public final TableField<ZipkinSpansRecord, Long> ID = createField("id", org.jooq.impl.SQLDataType.BIGINT.nullable(false), this, "");
 
     /**
-     * The column <code>cloudins.zipkin_spans.name</code>.
+     * The column <code>cloudins_apm.zipkin_spans.name</code>.
      */
     public final TableField<ZipkinSpansRecord, String> NAME = createField("name", org.jooq.impl.SQLDataType.VARCHAR.length(255).nullable(false), this, "");
 
     /**
-     * The column <code>cloudins.zipkin_spans.parent_id</code>.
+     * The column <code>cloudins_apm.zipkin_spans.parent_id</code>.
      */
     public final TableField<ZipkinSpansRecord, Long> PARENT_ID = createField("parent_id", org.jooq.impl.SQLDataType.BIGINT, this, "");
 
     /**
-     * The column <code>cloudins.zipkin_spans.debug</code>.
+     * The column <code>cloudins_apm.zipkin_spans.debug</code>.
      */
     public final TableField<ZipkinSpansRecord, Boolean> DEBUG = createField("debug", org.jooq.impl.SQLDataType.BIT, this, "");
 
     /**
-     * The column <code>cloudins.zipkin_spans.start_ts</code>. Span.timestamp(): epoch micros used for endTs query and to implement TTL
+     * The column <code>cloudins_apm.zipkin_spans.start_ts</code>. Span.timestamp(): epoch micros used for endTs query and to implement TTL
      */
     public final TableField<ZipkinSpansRecord, Long> START_TS = createField("start_ts", org.jooq.impl.SQLDataType.BIGINT, this, "Span.timestamp(): epoch micros used for endTs query and to implement TTL");
 
     /**
-     * The column <code>cloudins.zipkin_spans.duration</code>. Span.duration(): micros used for minDuration and maxDuration query
+     * The column <code>cloudins_apm.zipkin_spans.record_ts</code>.
+     */
+    public final TableField<ZipkinSpansRecord, Long> RECORD_TS = createField("record_ts", org.jooq.impl.SQLDataType.BIGINT.nullable(false).defaultValue(org.jooq.impl.DSL.inline("0", org.jooq.impl.SQLDataType.BIGINT)), this, "");
+
+    /**
+     * The column <code>cloudins_apm.zipkin_spans.duration</code>. Span.duration(): micros used for minDuration and maxDuration query
      */
     public final TableField<ZipkinSpansRecord, Long> DURATION = createField("duration", org.jooq.impl.SQLDataType.BIGINT, this, "Span.duration(): micros used for minDuration and maxDuration query");
 
     /**
-     * Create a <code>cloudins.zipkin_spans</code> table reference
+     * Create a <code>cloudins_apm.zipkin_spans</code> table reference
      */
     public ZipkinSpans() {
         this("zipkin_spans", null);
     }
 
     /**
-     * Create an aliased <code>cloudins.zipkin_spans</code> table reference
+     * Create an aliased <code>cloudins_apm.zipkin_spans</code> table reference
      */
     public ZipkinSpans(String alias) {
         this(alias, ZIPKIN_SPANS);
@@ -111,7 +116,7 @@ public class ZipkinSpans extends TableImpl<ZipkinSpansRecord> {
      */
     @Override
     public Schema getSchema() {
-        return Cloudins.CLOUDINS;
+        return CloudinsApm.CLOUDINS_APM;
     }
 
     /**

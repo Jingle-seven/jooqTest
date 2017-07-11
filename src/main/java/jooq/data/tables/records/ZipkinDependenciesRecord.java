@@ -29,59 +29,59 @@ import org.jooq.impl.TableRecordImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class ZipkinDependenciesRecord extends TableRecordImpl<ZipkinDependenciesRecord> implements Record4<Date, String, String, Long> {
 
-    private static final long serialVersionUID = 1611351453;
+    private static final long serialVersionUID = 703404603;
 
     /**
-     * Setter for <code>cloudins.zipkin_dependencies.day</code>.
+     * Setter for <code>cloudins_apm.zipkin_dependencies.day</code>.
      */
     public void setDay(Date value) {
         set(0, value);
     }
 
     /**
-     * Getter for <code>cloudins.zipkin_dependencies.day</code>.
+     * Getter for <code>cloudins_apm.zipkin_dependencies.day</code>.
      */
     public Date getDay() {
         return (Date) get(0);
     }
 
     /**
-     * Setter for <code>cloudins.zipkin_dependencies.parent</code>.
+     * Setter for <code>cloudins_apm.zipkin_dependencies.parent</code>.
      */
     public void setParent(String value) {
         set(1, value);
     }
 
     /**
-     * Getter for <code>cloudins.zipkin_dependencies.parent</code>.
+     * Getter for <code>cloudins_apm.zipkin_dependencies.parent</code>.
      */
     public String getParent() {
         return (String) get(1);
     }
 
     /**
-     * Setter for <code>cloudins.zipkin_dependencies.child</code>.
+     * Setter for <code>cloudins_apm.zipkin_dependencies.child</code>.
      */
     public void setChild(String value) {
         set(2, value);
     }
 
     /**
-     * Getter for <code>cloudins.zipkin_dependencies.child</code>.
+     * Getter for <code>cloudins_apm.zipkin_dependencies.child</code>.
      */
     public String getChild() {
         return (String) get(2);
     }
 
     /**
-     * Setter for <code>cloudins.zipkin_dependencies.call_count</code>.
+     * Setter for <code>cloudins_apm.zipkin_dependencies.call_count</code>.
      */
     public void setCallCount(Long value) {
         set(3, value);
     }
 
     /**
-     * Getter for <code>cloudins.zipkin_dependencies.call_count</code>.
+     * Getter for <code>cloudins_apm.zipkin_dependencies.call_count</code>.
      */
     public Long getCallCount() {
         return (Long) get(3);

@@ -28,31 +28,31 @@ import org.jooq.impl.UpdatableRecordImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class SysConfigsRecord extends UpdatableRecordImpl<SysConfigsRecord> implements Record2<String, String> {
 
-    private static final long serialVersionUID = 731086968;
+    private static final long serialVersionUID = 1484614072;
 
     /**
-     * Setter for <code>cloudins.sys_configs.config_name</code>.
+     * Setter for <code>cloudins_apm.sys_configs.config_name</code>.
      */
     public void setConfigName(String value) {
         set(0, value);
     }
 
     /**
-     * Getter for <code>cloudins.sys_configs.config_name</code>.
+     * Getter for <code>cloudins_apm.sys_configs.config_name</code>.
      */
     public String getConfigName() {
         return (String) get(0);
     }
 
     /**
-     * Setter for <code>cloudins.sys_configs.config_value</code>.
+     * Setter for <code>cloudins_apm.sys_configs.config_value</code>.
      */
     public void setConfigValue(String value) {
         set(1, value);
     }
 
     /**
-     * Getter for <code>cloudins.sys_configs.config_value</code>.
+     * Getter for <code>cloudins_apm.sys_configs.config_value</code>.
      */
     public String getConfigValue() {
         return (String) get(1);

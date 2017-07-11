@@ -78,7 +78,7 @@
                                     <name>org.jooq.util.mysql.MySQLDatabase</name>
                                     <includes>.*</includes>
                                     <excludes/>
-                                    <inputSchema>cloudins</inputSchema>
+                                    <inputSchema>cloudins_apm</inputSchema>
                                     <forcedTypes>
                                         <forcedType>
                                             <name>BOOLEAN</name>

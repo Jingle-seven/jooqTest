@@ -6,12 +6,30 @@ package jooq.data;
 
 import javax.annotation.Generated;
 
-import jooq.data.tables.*;
-import jooq.data.tables.CloudinsUserFieldAppliTable;
+import jooq.data.tables.AlarmMessage;
+import jooq.data.tables.CloudinsConfig;
+import jooq.data.tables.CloudinsLog;
+import jooq.data.tables.CloudinsRegion;
+import jooq.data.tables.CloudinsRole;
+import jooq.data.tables.CloudinsSpanBaseline;
+import jooq.data.tables.CloudinsUser;
+import jooq.data.tables.CloudinsUserRegionAppli;
+import jooq.data.tables.ErrorInfo;
+import jooq.data.tables.SpanInfos;
+import jooq.data.tables.SpanTopoTest;
+import jooq.data.tables.Spans;
+import jooq.data.tables.SpansBackup;
+import jooq.data.tables.StatisticsSpans;
+import jooq.data.tables.SysConfigs;
+import jooq.data.tables.TraceInfos;
+import jooq.data.tables.Traces;
+import jooq.data.tables.ZipkinAnnotations;
+import jooq.data.tables.ZipkinDependencies;
+import jooq.data.tables.ZipkinSpans;
 
 
 /**
- * Convenience access to all tables in cloudins
+ * Convenience access to all tables in cloudins_apm
  */
 @Generated(
     value = {
@@ -24,112 +42,102 @@ import jooq.data.tables.CloudinsUserFieldAppliTable;
 public class Tables {
 
     /**
-     * The table <code>cloudins.cloudins_config</code>.
+     * The table <code>cloudins_apm.alarm_message</code>.
+     */
+    public static final AlarmMessage ALARM_MESSAGE = jooq.data.tables.AlarmMessage.ALARM_MESSAGE;
+
+    /**
+     * The table <code>cloudins_apm.cloudins_config</code>.
      */
     public static final CloudinsConfig CLOUDINS_CONFIG = jooq.data.tables.CloudinsConfig.CLOUDINS_CONFIG;
 
     /**
-     * The table <code>cloudins.cloudins_field</code>.
-     */
-    public static final CloudinsFieldTable CLOUDINS_FIELD = CloudinsFieldTable.CLOUDINS_FIELD;
-
-    /**
-     * The table <code>cloudins.cloudins_log</code>.
+     * The table <code>cloudins_apm.cloudins_log</code>.
      */
     public static final CloudinsLog CLOUDINS_LOG = jooq.data.tables.CloudinsLog.CLOUDINS_LOG;
 
     /**
-     * The table <code>cloudins.cloudins_role</code>.
+     * The table <code>cloudins_apm.cloudins_region</code>.
+     */
+    public static final CloudinsRegion CLOUDINS_REGION = jooq.data.tables.CloudinsRegion.CLOUDINS_REGION;
+
+    /**
+     * The table <code>cloudins_apm.cloudins_role</code>.
      */
     public static final CloudinsRole CLOUDINS_ROLE = jooq.data.tables.CloudinsRole.CLOUDINS_ROLE;
 
     /**
-     * The table <code>cloudins.cloudins_user</code>.
+     * The table <code>cloudins_apm.cloudins_span_baseline</code>.
+     */
+    public static final CloudinsSpanBaseline CLOUDINS_SPAN_BASELINE = jooq.data.tables.CloudinsSpanBaseline.CLOUDINS_SPAN_BASELINE;
+
+    /**
+     * The table <code>cloudins_apm.cloudins_user</code>.
      */
     public static final CloudinsUser CLOUDINS_USER = jooq.data.tables.CloudinsUser.CLOUDINS_USER;
 
     /**
-     * The table <code>cloudins.cloudins_user_field_appli</code>.
+     * The table <code>cloudins_apm.cloudins_user_region_appli</code>.
      */
-    public static final CloudinsUserFieldAppliTable CLOUDINS_USER_FIELD_APPLI = CloudinsUserFieldAppliTable.CLOUDINS_USER_FIELD_APPLI;
+    public static final CloudinsUserRegionAppli CLOUDINS_USER_REGION_APPLI = jooq.data.tables.CloudinsUserRegionAppli.CLOUDINS_USER_REGION_APPLI;
 
     /**
-     * The table <code>cloudins.historical_peak</code>.
+     * The table <code>cloudins_apm.error_info</code>.
      */
-    public static final HistoricalPeak HISTORICAL_PEAK = jooq.data.tables.HistoricalPeak.HISTORICAL_PEAK;
+    public static final ErrorInfo ERROR_INFO = jooq.data.tables.ErrorInfo.ERROR_INFO;
 
     /**
-     * The table <code>cloudins.job_summary_basic</code>.
+     * The table <code>cloudins_apm.spans</code>.
      */
-    public static final JobSummaryBasic JOB_SUMMARY_BASIC = jooq.data.tables.JobSummaryBasic.JOB_SUMMARY_BASIC;
+    public static final Spans SPANS = jooq.data.tables.Spans.SPANS;
 
     /**
-     * The table <code>cloudins.job_type_summary</code>.
+     * The table <code>cloudins_apm.spans_backup</code>.
      */
-    public static final JobTypeSummary JOB_TYPE_SUMMARY = jooq.data.tables.JobTypeSummary.JOB_TYPE_SUMMARY;
+    public static final SpansBackup SPANS_BACKUP = jooq.data.tables.SpansBackup.SPANS_BACKUP;
 
     /**
-     * The table <code>cloudins.play_evolutions</code>.
+     * The table <code>cloudins_apm.span_infos</code>.
      */
-    public static final PlayEvolutions PLAY_EVOLUTIONS = jooq.data.tables.PlayEvolutions.PLAY_EVOLUTIONS;
+    public static final SpanInfos SPAN_INFOS = jooq.data.tables.SpanInfos.SPAN_INFOS;
 
     /**
-     * The table <code>cloudins.sys_configs</code>.
+     * The table <code>cloudins_apm.span_topo_test</code>.
+     */
+    public static final SpanTopoTest SPAN_TOPO_TEST = jooq.data.tables.SpanTopoTest.SPAN_TOPO_TEST;
+
+    /**
+     * The table <code>cloudins_apm.statistics_spans</code>.
+     */
+    public static final StatisticsSpans STATISTICS_SPANS = jooq.data.tables.StatisticsSpans.STATISTICS_SPANS;
+
+    /**
+     * The table <code>cloudins_apm.sys_configs</code>.
      */
     public static final SysConfigs SYS_CONFIGS = jooq.data.tables.SysConfigs.SYS_CONFIGS;
 
     /**
-     * VIEW
+     * The table <code>cloudins_apm.traces</code>.
      */
-    public static final TCounter T_COUNTER = jooq.data.tables.TCounter.T_COUNTER;
+    public static final Traces TRACES = jooq.data.tables.Traces.TRACES;
 
     /**
-     * The table <code>cloudins.user_job_summary</code>.
+     * The table <code>cloudins_apm.trace_infos</code>.
      */
-    public static final UserJobSummary USER_JOB_SUMMARY = jooq.data.tables.UserJobSummary.USER_JOB_SUMMARY;
+    public static final TraceInfos TRACE_INFOS = jooq.data.tables.TraceInfos.TRACE_INFOS;
 
     /**
-     * The table <code>cloudins.yarn_app_check_log</code>.
-     */
-    public static final YarnAppCheckLog YARN_APP_CHECK_LOG = jooq.data.tables.YarnAppCheckLog.YARN_APP_CHECK_LOG;
-
-    /**
-     * The table <code>cloudins.yarn_app_check_setting</code>.
-     */
-    public static final YarnAppCheckSetting YARN_APP_CHECK_SETTING = jooq.data.tables.YarnAppCheckSetting.YARN_APP_CHECK_SETTING;
-
-    /**
-     * The table <code>cloudins.yarn_app_heuristic_result</code>.
-     */
-    public static final YarnAppHeuristicResult YARN_APP_HEURISTIC_RESULT = jooq.data.tables.YarnAppHeuristicResult.YARN_APP_HEURISTIC_RESULT;
-
-    /**
-     * The table <code>cloudins.yarn_app_heuristic_result_details</code>.
-     */
-    public static final YarnAppHeuristicResultDetails YARN_APP_HEURISTIC_RESULT_DETAILS = jooq.data.tables.YarnAppHeuristicResultDetails.YARN_APP_HEURISTIC_RESULT_DETAILS;
-
-    /**
-     * The table <code>cloudins.yarn_app_result</code>.
-     */
-    public static final YarnAppResult YARN_APP_RESULT = jooq.data.tables.YarnAppResult.YARN_APP_RESULT;
-
-    /**
-     * The table <code>cloudins.zipkin_annotations</code>.
+     * The table <code>cloudins_apm.zipkin_annotations</code>.
      */
     public static final ZipkinAnnotations ZIPKIN_ANNOTATIONS = jooq.data.tables.ZipkinAnnotations.ZIPKIN_ANNOTATIONS;
 
     /**
-     * VIEW
-     */
-    public static final ZipkinCounter ZIPKIN_COUNTER = jooq.data.tables.ZipkinCounter.ZIPKIN_COUNTER;
-
-    /**
-     * The table <code>cloudins.zipkin_dependencies</code>.
+     * The table <code>cloudins_apm.zipkin_dependencies</code>.
      */
     public static final ZipkinDependencies ZIPKIN_DEPENDENCIES = jooq.data.tables.ZipkinDependencies.ZIPKIN_DEPENDENCIES;
 
     /**
-     * The table <code>cloudins.zipkin_spans</code>.
+     * The table <code>cloudins_apm.zipkin_spans</code>.
      */
     public static final ZipkinSpans ZIPKIN_SPANS = jooq.data.tables.ZipkinSpans.ZIPKIN_SPANS;
 }

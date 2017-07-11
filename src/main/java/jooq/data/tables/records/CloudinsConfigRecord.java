@@ -28,115 +28,115 @@ import org.jooq.impl.UpdatableRecordImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class CloudinsConfigRecord extends UpdatableRecordImpl<CloudinsConfigRecord> implements Record8<Long, String, String, String, String, String, Integer, String> {
 
-    private static final long serialVersionUID = -2970964;
+    private static final long serialVersionUID = -184125946;
 
     /**
-     * Setter for <code>cloudins.cloudins_config.id</code>.
+     * Setter for <code>cloudins_apm.cloudins_config.id</code>.
      */
     public void setId(Long value) {
         set(0, value);
     }
 
     /**
-     * Getter for <code>cloudins.cloudins_config.id</code>.
+     * Getter for <code>cloudins_apm.cloudins_config.id</code>.
      */
     public Long getId() {
         return (Long) get(0);
     }
 
     /**
-     * Setter for <code>cloudins.cloudins_config.product</code>. cloudins产品名称，如generater、analyzer等
+     * Setter for <code>cloudins_apm.cloudins_config.product</code>. cloudins产品名称，如generater、analyzer等
      */
     public void setProduct(String value) {
         set(1, value);
     }
 
     /**
-     * Getter for <code>cloudins.cloudins_config.product</code>. cloudins产品名称，如generater、analyzer等
+     * Getter for <code>cloudins_apm.cloudins_config.product</code>. cloudins产品名称，如generater、analyzer等
      */
     public String getProduct() {
         return (String) get(1);
     }
 
     /**
-     * Setter for <code>cloudins.cloudins_config.module</code>. config中的分类，如db, parameter,connection等
+     * Setter for <code>cloudins_apm.cloudins_config.module</code>. config中的分类，如db, parameter,connection等
      */
     public void setModule(String value) {
         set(2, value);
     }
 
     /**
-     * Getter for <code>cloudins.cloudins_config.module</code>. config中的分类，如db, parameter,connection等
+     * Getter for <code>cloudins_apm.cloudins_config.module</code>. config中的分类，如db, parameter,connection等
      */
     public String getModule() {
         return (String) get(2);
     }
 
     /**
-     * Setter for <code>cloudins.cloudins_config.parm_alias</code>.
+     * Setter for <code>cloudins_apm.cloudins_config.parm_alias</code>.
      */
     public void setParmAlias(String value) {
         set(3, value);
     }
 
     /**
-     * Getter for <code>cloudins.cloudins_config.parm_alias</code>.
+     * Getter for <code>cloudins_apm.cloudins_config.parm_alias</code>.
      */
     public String getParmAlias() {
         return (String) get(3);
     }
 
     /**
-     * Setter for <code>cloudins.cloudins_config.parm_name</code>.
+     * Setter for <code>cloudins_apm.cloudins_config.parm_name</code>.
      */
     public void setParmName(String value) {
         set(4, value);
     }
 
     /**
-     * Getter for <code>cloudins.cloudins_config.parm_name</code>.
+     * Getter for <code>cloudins_apm.cloudins_config.parm_name</code>.
      */
     public String getParmName() {
         return (String) get(4);
     }
 
     /**
-     * Setter for <code>cloudins.cloudins_config.parm_value</code>.
+     * Setter for <code>cloudins_apm.cloudins_config.parm_value</code>.
      */
     public void setParmValue(String value) {
         set(5, value);
     }
 
     /**
-     * Getter for <code>cloudins.cloudins_config.parm_value</code>.
+     * Getter for <code>cloudins_apm.cloudins_config.parm_value</code>.
      */
     public String getParmValue() {
         return (String) get(5);
     }
 
     /**
-     * Setter for <code>cloudins.cloudins_config.flag</code>. 预留字段
+     * Setter for <code>cloudins_apm.cloudins_config.flag</code>. 预留字段
      */
     public void setFlag(Integer value) {
         set(6, value);
     }
 
     /**
-     * Getter for <code>cloudins.cloudins_config.flag</code>. 预留字段
+     * Getter for <code>cloudins_apm.cloudins_config.flag</code>. 预留字段
      */
     public Integer getFlag() {
         return (Integer) get(6);
     }
 
     /**
-     * Setter for <code>cloudins.cloudins_config.comment</code>.
+     * Setter for <code>cloudins_apm.cloudins_config.comment</code>.
      */
     public void setComment(String value) {
         set(7, value);
     }
 
     /**
-     * Getter for <code>cloudins.cloudins_config.comment</code>.
+     * Getter for <code>cloudins_apm.cloudins_config.comment</code>.
      */
     public String getComment() {
         return (String) get(7);

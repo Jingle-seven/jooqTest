@@ -72,10 +72,10 @@ public class CloudinsUserDao extends DAOImpl<CloudinsUserRecord, jooq.data.table
     }
 
     /**
-     * Fetch records that have <code>field_id IN (values)</code>
+     * Fetch records that have <code>region_id IN (values)</code>
      */
-    public List<jooq.data.tables.pojos.CloudinsUser> fetchByFieldId(Long... values) {
-        return fetch(CloudinsUser.CLOUDINS_USER.FIELD_ID, values);
+    public List<jooq.data.tables.pojos.CloudinsUser> fetchByRegionId(Long... values) {
+        return fetch(CloudinsUser.CLOUDINS_USER.REGION_ID, values);
     }
 
     /**

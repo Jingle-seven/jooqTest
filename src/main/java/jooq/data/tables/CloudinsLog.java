@@ -9,7 +9,7 @@ import java.util.List;
 
 import javax.annotation.Generated;
 
-import jooq.data.Cloudins;
+import jooq.data.CloudinsApm;
 import jooq.data.Keys;
 import jooq.data.tables.records.CloudinsLogRecord;
 
@@ -35,10 +35,10 @@ import org.jooq.impl.TableImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class CloudinsLog extends TableImpl<CloudinsLogRecord> {
 
-    private static final long serialVersionUID = 144670130;
+    private static final long serialVersionUID = 211657660;
 
     /**
-     * The reference instance of <code>cloudins.cloudins_log</code>
+     * The reference instance of <code>cloudins_apm.cloudins_log</code>
      */
     public static final CloudinsLog CLOUDINS_LOG = new CloudinsLog();
 
@@ -51,54 +51,54 @@ public class CloudinsLog extends TableImpl<CloudinsLogRecord> {
     }
 
     /**
-     * The column <code>cloudins.cloudins_log.id</code>.
+     * The column <code>cloudins_apm.cloudins_log.id</code>.
      */
     public final TableField<CloudinsLogRecord, Long> ID = createField("id", org.jooq.impl.SQLDataType.BIGINT.nullable(false), this, "");
 
     /**
-     * The column <code>cloudins.cloudins_log.level</code>.
+     * The column <code>cloudins_apm.cloudins_log.level</code>.
      */
     public final TableField<CloudinsLogRecord, String> LEVEL = createField("level", org.jooq.impl.SQLDataType.CHAR.length(10).nullable(false).defaultValue(org.jooq.impl.DSL.inline("", org.jooq.impl.SQLDataType.CHAR)), this, "");
 
     /**
-     * The column <code>cloudins.cloudins_log.method</code>.
+     * The column <code>cloudins_apm.cloudins_log.method</code>.
      */
     public final TableField<CloudinsLogRecord, String> METHOD = createField("method", org.jooq.impl.SQLDataType.VARCHAR.length(255).nullable(false).defaultValue(org.jooq.impl.DSL.inline("", org.jooq.impl.SQLDataType.VARCHAR)), this, "");
 
     /**
-     * The column <code>cloudins.cloudins_log.message</code>.
+     * The column <code>cloudins_apm.cloudins_log.message</code>.
      */
     public final TableField<CloudinsLogRecord, String> MESSAGE = createField("message", org.jooq.impl.SQLDataType.CLOB.nullable(false), this, "");
 
     /**
-     * The column <code>cloudins.cloudins_log.time</code>.
+     * The column <code>cloudins_apm.cloudins_log.time</code>.
      */
     public final TableField<CloudinsLogRecord, String> TIME = createField("time", org.jooq.impl.SQLDataType.CHAR.length(20), this, "");
 
     /**
-     * The column <code>cloudins.cloudins_log.line</code>.
+     * The column <code>cloudins_apm.cloudins_log.line</code>.
      */
     public final TableField<CloudinsLogRecord, Integer> LINE = createField("line", org.jooq.impl.SQLDataType.INTEGER, this, "");
 
     /**
-     * The column <code>cloudins.cloudins_log.displayed</code>.
+     * The column <code>cloudins_apm.cloudins_log.displayed</code>.
      */
     public final TableField<CloudinsLogRecord, Boolean> DISPLAYED = createField("displayed", org.jooq.impl.SQLDataType.BOOLEAN.nullable(false).defaultValue(org.jooq.impl.DSL.inline("0", org.jooq.impl.SQLDataType.BOOLEAN)), this, "");
 
     /**
-     * The column <code>cloudins.cloudins_log.isread</code>.
+     * The column <code>cloudins_apm.cloudins_log.isread</code>.
      */
     public final TableField<CloudinsLogRecord, Boolean> ISREAD = createField("isread", org.jooq.impl.SQLDataType.BOOLEAN.nullable(false).defaultValue(org.jooq.impl.DSL.inline("0", org.jooq.impl.SQLDataType.BOOLEAN)), this, "");
 
     /**
-     * Create a <code>cloudins.cloudins_log</code> table reference
+     * Create a <code>cloudins_apm.cloudins_log</code> table reference
      */
     public CloudinsLog() {
         this("cloudins_log", null);
     }
 
     /**
-     * Create an aliased <code>cloudins.cloudins_log</code> table reference
+     * Create an aliased <code>cloudins_apm.cloudins_log</code> table reference
      */
     public CloudinsLog(String alias) {
         this(alias, CLOUDINS_LOG);
@@ -117,7 +117,7 @@ public class CloudinsLog extends TableImpl<CloudinsLogRecord> {
      */
     @Override
     public Schema getSchema() {
-        return Cloudins.CLOUDINS;
+        return CloudinsApm.CLOUDINS_APM;
     }
 
     /**

@@ -28,59 +28,59 @@ import org.jooq.impl.UpdatableRecordImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class CloudinsRoleRecord extends UpdatableRecordImpl<CloudinsRoleRecord> implements Record4<Long, String, String, String> {
 
-    private static final long serialVersionUID = -2014968071;
+    private static final long serialVersionUID = -2117982407;
 
     /**
-     * Setter for <code>cloudins.cloudins_role.id</code>.
+     * Setter for <code>cloudins_apm.cloudins_role.id</code>.
      */
     public void setId(Long value) {
         set(0, value);
     }
 
     /**
-     * Getter for <code>cloudins.cloudins_role.id</code>.
+     * Getter for <code>cloudins_apm.cloudins_role.id</code>.
      */
     public Long getId() {
         return (Long) get(0);
     }
 
     /**
-     * Setter for <code>cloudins.cloudins_role.name</code>.
+     * Setter for <code>cloudins_apm.cloudins_role.name</code>.
      */
     public void setName(String value) {
         set(1, value);
     }
 
     /**
-     * Getter for <code>cloudins.cloudins_role.name</code>.
+     * Getter for <code>cloudins_apm.cloudins_role.name</code>.
      */
     public String getName() {
         return (String) get(1);
     }
 
     /**
-     * Setter for <code>cloudins.cloudins_role.auth</code>.
+     * Setter for <code>cloudins_apm.cloudins_role.auth</code>.
      */
     public void setAuth(String value) {
         set(2, value);
     }
 
     /**
-     * Getter for <code>cloudins.cloudins_role.auth</code>.
+     * Getter for <code>cloudins_apm.cloudins_role.auth</code>.
      */
     public String getAuth() {
         return (String) get(2);
     }
 
     /**
-     * Setter for <code>cloudins.cloudins_role.remark</code>.
+     * Setter for <code>cloudins_apm.cloudins_role.remark</code>.
      */
     public void setRemark(String value) {
         set(3, value);
     }
 
     /**
-     * Getter for <code>cloudins.cloudins_role.remark</code>.
+     * Getter for <code>cloudins_apm.cloudins_role.remark</code>.
      */
     public String getRemark() {
         return (String) get(3);

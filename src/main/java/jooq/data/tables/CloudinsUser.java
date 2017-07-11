@@ -9,7 +9,7 @@ import java.util.List;
 
 import javax.annotation.Generated;
 
-import jooq.data.Cloudins;
+import jooq.data.CloudinsApm;
 import jooq.data.Keys;
 import jooq.data.tables.records.CloudinsUserRecord;
 
@@ -35,10 +35,10 @@ import org.jooq.impl.TableImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class CloudinsUser extends TableImpl<CloudinsUserRecord> {
 
-    private static final long serialVersionUID = 1406222278;
+    private static final long serialVersionUID = -1548199042;
 
     /**
-     * The reference instance of <code>cloudins.cloudins_user</code>
+     * The reference instance of <code>cloudins_apm.cloudins_user</code>
      */
     public static final CloudinsUser CLOUDINS_USER = new CloudinsUser();
 
@@ -51,54 +51,79 @@ public class CloudinsUser extends TableImpl<CloudinsUserRecord> {
     }
 
     /**
-     * The column <code>cloudins.cloudins_user.id</code>.
+     * The column <code>cloudins_apm.cloudins_user.id</code>.
      */
-    public final TableField<CloudinsUserRecord, Integer> ID = createField("id", org.jooq.impl.SQLDataType.INTEGER.nullable(false), this, "");
+    public final TableField<CloudinsUserRecord, Long> ID = createField("id", org.jooq.impl.SQLDataType.BIGINT.nullable(false), this, "");
 
     /**
-     * The column <code>cloudins.cloudins_user.role_id</code>.
+     * The column <code>cloudins_apm.cloudins_user.role_id</code>.
      */
-    public final TableField<CloudinsUserRecord, Integer> ROLE_ID = createField("role_id", org.jooq.impl.SQLDataType.INTEGER.nullable(false).defaultValue(org.jooq.impl.DSL.inline("0", org.jooq.impl.SQLDataType.INTEGER)), this, "");
+    public final TableField<CloudinsUserRecord, Long> ROLE_ID = createField("role_id", org.jooq.impl.SQLDataType.BIGINT.nullable(false).defaultValue(org.jooq.impl.DSL.inline("0", org.jooq.impl.SQLDataType.BIGINT)), this, "");
 
     /**
-     * The column <code>cloudins.cloudins_user.field_id</code>.
+     * The column <code>cloudins_apm.cloudins_user.region_id</code>.
      */
-    public final TableField<CloudinsUserRecord, String> FIELD_ID = createField("field_id", org.jooq.impl.SQLDataType.VARCHAR.length(255).nullable(false).defaultValue(org.jooq.impl.DSL.inline("", org.jooq.impl.SQLDataType.VARCHAR)), this, "");
+    public final TableField<CloudinsUserRecord, Long> REGION_ID = createField("region_id", org.jooq.impl.SQLDataType.BIGINT.nullable(false).defaultValue(org.jooq.impl.DSL.inline("0", org.jooq.impl.SQLDataType.BIGINT)), this, "");
 
     /**
-     * The column <code>cloudins.cloudins_user.name</code>.
+     * The column <code>cloudins_apm.cloudins_user.account</code>.
+     */
+    public final TableField<CloudinsUserRecord, String> ACCOUNT = createField("account", org.jooq.impl.SQLDataType.VARCHAR.length(255).nullable(false).defaultValue(org.jooq.impl.DSL.inline("", org.jooq.impl.SQLDataType.VARCHAR)), this, "");
+
+    /**
+     * The column <code>cloudins_apm.cloudins_user.name</code>.
      */
     public final TableField<CloudinsUserRecord, String> NAME = createField("name", org.jooq.impl.SQLDataType.CHAR.length(20).nullable(false).defaultValue(org.jooq.impl.DSL.inline("", org.jooq.impl.SQLDataType.CHAR)), this, "");
 
     /**
-     * The column <code>cloudins.cloudins_user.password</code>.
+     * The column <code>cloudins_apm.cloudins_user.password</code>.
      */
     public final TableField<CloudinsUserRecord, String> PASSWORD = createField("password", org.jooq.impl.SQLDataType.VARCHAR.length(255).nullable(false).defaultValue(org.jooq.impl.DSL.inline("", org.jooq.impl.SQLDataType.VARCHAR)), this, "");
 
     /**
-     * The column <code>cloudins.cloudins_user.mail</code>.
+     * The column <code>cloudins_apm.cloudins_user.gender</code>.
+     */
+    public final TableField<CloudinsUserRecord, Boolean> GENDER = createField("gender", org.jooq.impl.SQLDataType.BOOLEAN.nullable(false).defaultValue(org.jooq.impl.DSL.inline("0", org.jooq.impl.SQLDataType.BOOLEAN)), this, "");
+
+    /**
+     * The column <code>cloudins_apm.cloudins_user.mail</code>.
      */
     public final TableField<CloudinsUserRecord, String> MAIL = createField("mail", org.jooq.impl.SQLDataType.VARCHAR.length(255).nullable(false).defaultValue(org.jooq.impl.DSL.inline("", org.jooq.impl.SQLDataType.VARCHAR)), this, "");
 
     /**
-     * The column <code>cloudins.cloudins_user.status</code>.
+     * The column <code>cloudins_apm.cloudins_user.company</code>.
      */
-    public final TableField<CloudinsUserRecord, String> STATUS = createField("status", org.jooq.impl.SQLDataType.VARCHAR.length(255), this, "");
+    public final TableField<CloudinsUserRecord, String> COMPANY = createField("company", org.jooq.impl.SQLDataType.VARCHAR.length(255).nullable(false).defaultValue(org.jooq.impl.DSL.inline("", org.jooq.impl.SQLDataType.VARCHAR)), this, "");
 
     /**
-     * The column <code>cloudins.cloudins_user.remark</code>.
+     * The column <code>cloudins_apm.cloudins_user.phone</code>.
      */
-    public final TableField<CloudinsUserRecord, String> REMARK = createField("remark", org.jooq.impl.SQLDataType.VARCHAR.length(255), this, "");
+    public final TableField<CloudinsUserRecord, Long> PHONE = createField("phone", org.jooq.impl.SQLDataType.BIGINT.nullable(false).defaultValue(org.jooq.impl.DSL.inline("0", org.jooq.impl.SQLDataType.BIGINT)), this, "");
 
     /**
-     * Create a <code>cloudins.cloudins_user</code> table reference
+     * The column <code>cloudins_apm.cloudins_user.qq</code>.
+     */
+    public final TableField<CloudinsUserRecord, Long> QQ = createField("qq", org.jooq.impl.SQLDataType.BIGINT.nullable(false).defaultValue(org.jooq.impl.DSL.inline("0", org.jooq.impl.SQLDataType.BIGINT)), this, "");
+
+    /**
+     * The column <code>cloudins_apm.cloudins_user.status</code>.
+     */
+    public final TableField<CloudinsUserRecord, String> STATUS = createField("status", org.jooq.impl.SQLDataType.VARCHAR.length(255).nullable(false).defaultValue(org.jooq.impl.DSL.inline("", org.jooq.impl.SQLDataType.VARCHAR)), this, "");
+
+    /**
+     * The column <code>cloudins_apm.cloudins_user.remark</code>.
+     */
+    public final TableField<CloudinsUserRecord, String> REMARK = createField("remark", org.jooq.impl.SQLDataType.VARCHAR.length(255).nullable(false).defaultValue(org.jooq.impl.DSL.inline("", org.jooq.impl.SQLDataType.VARCHAR)), this, "");
+
+    /**
+     * Create a <code>cloudins_apm.cloudins_user</code> table reference
      */
     public CloudinsUser() {
         this("cloudins_user", null);
     }
 
     /**
-     * Create an aliased <code>cloudins.cloudins_user</code> table reference
+     * Create an aliased <code>cloudins_apm.cloudins_user</code> table reference
      */
     public CloudinsUser(String alias) {
         this(alias, CLOUDINS_USER);
@@ -117,14 +142,14 @@ public class CloudinsUser extends TableImpl<CloudinsUserRecord> {
      */
     @Override
     public Schema getSchema() {
-        return Cloudins.CLOUDINS;
+        return CloudinsApm.CLOUDINS_APM;
     }
 
     /**
      * {@inheritDoc}
      */
     @Override
-    public Identity<CloudinsUserRecord, Integer> getIdentity() {
+    public Identity<CloudinsUserRecord, Long> getIdentity() {
         return Keys.IDENTITY_CLOUDINS_USER;
     }
 

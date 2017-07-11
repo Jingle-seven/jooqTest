@@ -10,7 +10,7 @@ import java.util.List;
 
 import javax.annotation.Generated;
 
-import jooq.data.Cloudins;
+import jooq.data.CloudinsApm;
 import jooq.data.Keys;
 import jooq.data.tables.records.ZipkinDependenciesRecord;
 
@@ -35,10 +35,10 @@ import org.jooq.impl.TableImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class ZipkinDependencies extends TableImpl<ZipkinDependenciesRecord> {
 
-    private static final long serialVersionUID = 325766298;
+    private static final long serialVersionUID = -1059332518;
 
     /**
-     * The reference instance of <code>cloudins.zipkin_dependencies</code>
+     * The reference instance of <code>cloudins_apm.zipkin_dependencies</code>
      */
     public static final ZipkinDependencies ZIPKIN_DEPENDENCIES = new ZipkinDependencies();
 
@@ -51,34 +51,34 @@ public class ZipkinDependencies extends TableImpl<ZipkinDependenciesRecord> {
     }
 
     /**
-     * The column <code>cloudins.zipkin_dependencies.day</code>.
+     * The column <code>cloudins_apm.zipkin_dependencies.day</code>.
      */
     public final TableField<ZipkinDependenciesRecord, Date> DAY = createField("day", org.jooq.impl.SQLDataType.DATE.nullable(false), this, "");
 
     /**
-     * The column <code>cloudins.zipkin_dependencies.parent</code>.
+     * The column <code>cloudins_apm.zipkin_dependencies.parent</code>.
      */
     public final TableField<ZipkinDependenciesRecord, String> PARENT = createField("parent", org.jooq.impl.SQLDataType.VARCHAR.length(255).nullable(false), this, "");
 
     /**
-     * The column <code>cloudins.zipkin_dependencies.child</code>.
+     * The column <code>cloudins_apm.zipkin_dependencies.child</code>.
      */
     public final TableField<ZipkinDependenciesRecord, String> CHILD = createField("child", org.jooq.impl.SQLDataType.VARCHAR.length(255).nullable(false), this, "");
 
     /**
-     * The column <code>cloudins.zipkin_dependencies.call_count</code>.
+     * The column <code>cloudins_apm.zipkin_dependencies.call_count</code>.
      */
     public final TableField<ZipkinDependenciesRecord, Long> CALL_COUNT = createField("call_count", org.jooq.impl.SQLDataType.BIGINT, this, "");
 
     /**
-     * Create a <code>cloudins.zipkin_dependencies</code> table reference
+     * Create a <code>cloudins_apm.zipkin_dependencies</code> table reference
      */
     public ZipkinDependencies() {
         this("zipkin_dependencies", null);
     }
 
     /**
-     * Create an aliased <code>cloudins.zipkin_dependencies</code> table reference
+     * Create an aliased <code>cloudins_apm.zipkin_dependencies</code> table reference
      */
     public ZipkinDependencies(String alias) {
         this(alias, ZIPKIN_DEPENDENCIES);
@@ -97,7 +97,7 @@ public class ZipkinDependencies extends TableImpl<ZipkinDependenciesRecord> {
      */
     @Override
     public Schema getSchema() {
-        return Cloudins.CLOUDINS;
+        return CloudinsApm.CLOUDINS_APM;
     }
 
     /**

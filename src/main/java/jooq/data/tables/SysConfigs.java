@@ -9,7 +9,7 @@ import java.util.List;
 
 import javax.annotation.Generated;
 
-import jooq.data.Cloudins;
+import jooq.data.CloudinsApm;
 import jooq.data.Keys;
 import jooq.data.tables.records.SysConfigsRecord;
 
@@ -34,10 +34,10 @@ import org.jooq.impl.TableImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class SysConfigs extends TableImpl<SysConfigsRecord> {
 
-    private static final long serialVersionUID = -1206608372;
+    private static final long serialVersionUID = 112666178;
 
     /**
-     * The reference instance of <code>cloudins.sys_configs</code>
+     * The reference instance of <code>cloudins_apm.sys_configs</code>
      */
     public static final SysConfigs SYS_CONFIGS = new SysConfigs();
 
@@ -50,24 +50,24 @@ public class SysConfigs extends TableImpl<SysConfigsRecord> {
     }
 
     /**
-     * The column <code>cloudins.sys_configs.config_name</code>.
+     * The column <code>cloudins_apm.sys_configs.config_name</code>.
      */
     public final TableField<SysConfigsRecord, String> CONFIG_NAME = createField("config_name", org.jooq.impl.SQLDataType.VARCHAR.length(50).nullable(false), this, "");
 
     /**
-     * The column <code>cloudins.sys_configs.config_value</code>.
+     * The column <code>cloudins_apm.sys_configs.config_value</code>.
      */
     public final TableField<SysConfigsRecord, String> CONFIG_VALUE = createField("config_value", org.jooq.impl.SQLDataType.VARCHAR.length(50).nullable(false), this, "");
 
     /**
-     * Create a <code>cloudins.sys_configs</code> table reference
+     * Create a <code>cloudins_apm.sys_configs</code> table reference
      */
     public SysConfigs() {
         this("sys_configs", null);
     }
 
     /**
-     * Create an aliased <code>cloudins.sys_configs</code> table reference
+     * Create an aliased <code>cloudins_apm.sys_configs</code> table reference
      */
     public SysConfigs(String alias) {
         this(alias, SYS_CONFIGS);
@@ -86,7 +86,7 @@ public class SysConfigs extends TableImpl<SysConfigsRecord> {
      */
     @Override
     public Schema getSchema() {
-        return Cloudins.CLOUDINS;
+        return CloudinsApm.CLOUDINS_APM;
     }
 
     /**

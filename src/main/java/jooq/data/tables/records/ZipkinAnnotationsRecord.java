@@ -27,143 +27,143 @@ import org.jooq.impl.TableRecordImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class ZipkinAnnotationsRecord extends TableRecordImpl<ZipkinAnnotationsRecord> implements Record10<Long, Long, String, byte[], Integer, Long, Integer, byte[], Short, String> {
 
-    private static final long serialVersionUID = -42119051;
+    private static final long serialVersionUID = 1788870483;
 
     /**
-     * Setter for <code>cloudins.zipkin_annotations.trace_id</code>. coincides with zipkin_spans.trace_id
+     * Setter for <code>cloudins_apm.zipkin_annotations.trace_id</code>. coincides with zipkin_spans.trace_id
      */
     public void setTraceId(Long value) {
         set(0, value);
     }
 
     /**
-     * Getter for <code>cloudins.zipkin_annotations.trace_id</code>. coincides with zipkin_spans.trace_id
+     * Getter for <code>cloudins_apm.zipkin_annotations.trace_id</code>. coincides with zipkin_spans.trace_id
      */
     public Long getTraceId() {
         return (Long) get(0);
     }
 
     /**
-     * Setter for <code>cloudins.zipkin_annotations.span_id</code>. coincides with zipkin_spans.id
+     * Setter for <code>cloudins_apm.zipkin_annotations.span_id</code>. coincides with zipkin_spans.id
      */
     public void setSpanId(Long value) {
         set(1, value);
     }
 
     /**
-     * Getter for <code>cloudins.zipkin_annotations.span_id</code>. coincides with zipkin_spans.id
+     * Getter for <code>cloudins_apm.zipkin_annotations.span_id</code>. coincides with zipkin_spans.id
      */
     public Long getSpanId() {
         return (Long) get(1);
     }
 
     /**
-     * Setter for <code>cloudins.zipkin_annotations.a_key</code>. BinaryAnnotation.key or Annotation.value if type == -1
+     * Setter for <code>cloudins_apm.zipkin_annotations.a_key</code>. BinaryAnnotation.key or Annotation.value if type == -1
      */
     public void setAKey(String value) {
         set(2, value);
     }
 
     /**
-     * Getter for <code>cloudins.zipkin_annotations.a_key</code>. BinaryAnnotation.key or Annotation.value if type == -1
+     * Getter for <code>cloudins_apm.zipkin_annotations.a_key</code>. BinaryAnnotation.key or Annotation.value if type == -1
      */
     public String getAKey() {
         return (String) get(2);
     }
 
     /**
-     * Setter for <code>cloudins.zipkin_annotations.a_value</code>. BinaryAnnotation.value(), which must be smaller than 64KB
+     * Setter for <code>cloudins_apm.zipkin_annotations.a_value</code>. BinaryAnnotation.value(), which must be smaller than 64KB
      */
     public void setAValue(byte[] value) {
         set(3, value);
     }
 
     /**
-     * Getter for <code>cloudins.zipkin_annotations.a_value</code>. BinaryAnnotation.value(), which must be smaller than 64KB
+     * Getter for <code>cloudins_apm.zipkin_annotations.a_value</code>. BinaryAnnotation.value(), which must be smaller than 64KB
      */
     public byte[] getAValue() {
         return (byte[]) get(3);
     }
 
     /**
-     * Setter for <code>cloudins.zipkin_annotations.a_type</code>. BinaryAnnotation.type() or -1 if Annotation
+     * Setter for <code>cloudins_apm.zipkin_annotations.a_type</code>. BinaryAnnotation.type() or -1 if Annotation
      */
     public void setAType(Integer value) {
         set(4, value);
     }
 
     /**
-     * Getter for <code>cloudins.zipkin_annotations.a_type</code>. BinaryAnnotation.type() or -1 if Annotation
+     * Getter for <code>cloudins_apm.zipkin_annotations.a_type</code>. BinaryAnnotation.type() or -1 if Annotation
      */
     public Integer getAType() {
         return (Integer) get(4);
     }
 
     /**
-     * Setter for <code>cloudins.zipkin_annotations.a_timestamp</code>. Used to implement TTL; Annotation.timestamp or zipkin_spans.timestamp
+     * Setter for <code>cloudins_apm.zipkin_annotations.a_timestamp</code>. Used to implement TTL; Annotation.timestamp or zipkin_spans.timestamp
      */
     public void setATimestamp(Long value) {
         set(5, value);
     }
 
     /**
-     * Getter for <code>cloudins.zipkin_annotations.a_timestamp</code>. Used to implement TTL; Annotation.timestamp or zipkin_spans.timestamp
+     * Getter for <code>cloudins_apm.zipkin_annotations.a_timestamp</code>. Used to implement TTL; Annotation.timestamp or zipkin_spans.timestamp
      */
     public Long getATimestamp() {
         return (Long) get(5);
     }
 
     /**
-     * Setter for <code>cloudins.zipkin_annotations.endpoint_ipv4</code>. Null when Binary/Annotation.endpoint is null
+     * Setter for <code>cloudins_apm.zipkin_annotations.endpoint_ipv4</code>. Null when Binary/Annotation.endpoint is null
      */
     public void setEndpointIpv4(Integer value) {
         set(6, value);
     }
 
     /**
-     * Getter for <code>cloudins.zipkin_annotations.endpoint_ipv4</code>. Null when Binary/Annotation.endpoint is null
+     * Getter for <code>cloudins_apm.zipkin_annotations.endpoint_ipv4</code>. Null when Binary/Annotation.endpoint is null
      */
     public Integer getEndpointIpv4() {
         return (Integer) get(6);
     }
 
     /**
-     * Setter for <code>cloudins.zipkin_annotations.endpoint_ipv6</code>. Null when Binary/Annotation.endpoint is null, or no IPv6 address
+     * Setter for <code>cloudins_apm.zipkin_annotations.endpoint_ipv6</code>. Null when Binary/Annotation.endpoint is null, or no IPv6 address
      */
     public void setEndpointIpv6(byte[] value) {
         set(7, value);
     }
 
     /**
-     * Getter for <code>cloudins.zipkin_annotations.endpoint_ipv6</code>. Null when Binary/Annotation.endpoint is null, or no IPv6 address
+     * Getter for <code>cloudins_apm.zipkin_annotations.endpoint_ipv6</code>. Null when Binary/Annotation.endpoint is null, or no IPv6 address
      */
     public byte[] getEndpointIpv6() {
         return (byte[]) get(7);
     }
 
     /**
-     * Setter for <code>cloudins.zipkin_annotations.endpoint_port</code>. Null when Binary/Annotation.endpoint is null
+     * Setter for <code>cloudins_apm.zipkin_annotations.endpoint_port</code>. Null when Binary/Annotation.endpoint is null
      */
     public void setEndpointPort(Short value) {
         set(8, value);
     }
 
     /**
-     * Getter for <code>cloudins.zipkin_annotations.endpoint_port</code>. Null when Binary/Annotation.endpoint is null
+     * Getter for <code>cloudins_apm.zipkin_annotations.endpoint_port</code>. Null when Binary/Annotation.endpoint is null
      */
     public Short getEndpointPort() {
         return (Short) get(8);
     }
 
     /**
-     * Setter for <code>cloudins.zipkin_annotations.endpoint_service_name</code>. Null when Binary/Annotation.endpoint is null
+     * Setter for <code>cloudins_apm.zipkin_annotations.endpoint_service_name</code>. Null when Binary/Annotation.endpoint is null
      */
     public void setEndpointServiceName(String value) {
         set(9, value);
     }
 
     /**
-     * Getter for <code>cloudins.zipkin_annotations.endpoint_service_name</code>. Null when Binary/Annotation.endpoint is null
+     * Getter for <code>cloudins_apm.zipkin_annotations.endpoint_service_name</code>. Null when Binary/Annotation.endpoint is null
      */
     public String getEndpointServiceName() {
         return (String) get(9);

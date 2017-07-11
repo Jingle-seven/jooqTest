@@ -9,7 +9,7 @@ import java.util.List;
 
 import javax.annotation.Generated;
 
-import jooq.data.Cloudins;
+import jooq.data.CloudinsApm;
 import jooq.data.Keys;
 import jooq.data.tables.records.ZipkinAnnotationsRecord;
 
@@ -34,10 +34,10 @@ import org.jooq.impl.TableImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class ZipkinAnnotations extends TableImpl<ZipkinAnnotationsRecord> {
 
-    private static final long serialVersionUID = 300386433;
+    private static final long serialVersionUID = 938051067;
 
     /**
-     * The reference instance of <code>cloudins.zipkin_annotations</code>
+     * The reference instance of <code>cloudins_apm.zipkin_annotations</code>
      */
     public static final ZipkinAnnotations ZIPKIN_ANNOTATIONS = new ZipkinAnnotations();
 
@@ -50,64 +50,64 @@ public class ZipkinAnnotations extends TableImpl<ZipkinAnnotationsRecord> {
     }
 
     /**
-     * The column <code>cloudins.zipkin_annotations.trace_id</code>. coincides with zipkin_spans.trace_id
+     * The column <code>cloudins_apm.zipkin_annotations.trace_id</code>. coincides with zipkin_spans.trace_id
      */
     public final TableField<ZipkinAnnotationsRecord, Long> TRACE_ID = createField("trace_id", org.jooq.impl.SQLDataType.BIGINT.nullable(false), this, "coincides with zipkin_spans.trace_id");
 
     /**
-     * The column <code>cloudins.zipkin_annotations.span_id</code>. coincides with zipkin_spans.id
+     * The column <code>cloudins_apm.zipkin_annotations.span_id</code>. coincides with zipkin_spans.id
      */
     public final TableField<ZipkinAnnotationsRecord, Long> SPAN_ID = createField("span_id", org.jooq.impl.SQLDataType.BIGINT.nullable(false), this, "coincides with zipkin_spans.id");
 
     /**
-     * The column <code>cloudins.zipkin_annotations.a_key</code>. BinaryAnnotation.key or Annotation.value if type == -1
+     * The column <code>cloudins_apm.zipkin_annotations.a_key</code>. BinaryAnnotation.key or Annotation.value if type == -1
      */
     public final TableField<ZipkinAnnotationsRecord, String> A_KEY = createField("a_key", org.jooq.impl.SQLDataType.VARCHAR.length(255).nullable(false), this, "BinaryAnnotation.key or Annotation.value if type == -1");
 
     /**
-     * The column <code>cloudins.zipkin_annotations.a_value</code>. BinaryAnnotation.value(), which must be smaller than 64KB
+     * The column <code>cloudins_apm.zipkin_annotations.a_value</code>. BinaryAnnotation.value(), which must be smaller than 64KB
      */
     public final TableField<ZipkinAnnotationsRecord, byte[]> A_VALUE = createField("a_value", org.jooq.impl.SQLDataType.BLOB, this, "BinaryAnnotation.value(), which must be smaller than 64KB");
 
     /**
-     * The column <code>cloudins.zipkin_annotations.a_type</code>. BinaryAnnotation.type() or -1 if Annotation
+     * The column <code>cloudins_apm.zipkin_annotations.a_type</code>. BinaryAnnotation.type() or -1 if Annotation
      */
     public final TableField<ZipkinAnnotationsRecord, Integer> A_TYPE = createField("a_type", org.jooq.impl.SQLDataType.INTEGER.nullable(false), this, "BinaryAnnotation.type() or -1 if Annotation");
 
     /**
-     * The column <code>cloudins.zipkin_annotations.a_timestamp</code>. Used to implement TTL; Annotation.timestamp or zipkin_spans.timestamp
+     * The column <code>cloudins_apm.zipkin_annotations.a_timestamp</code>. Used to implement TTL; Annotation.timestamp or zipkin_spans.timestamp
      */
     public final TableField<ZipkinAnnotationsRecord, Long> A_TIMESTAMP = createField("a_timestamp", org.jooq.impl.SQLDataType.BIGINT, this, "Used to implement TTL; Annotation.timestamp or zipkin_spans.timestamp");
 
     /**
-     * The column <code>cloudins.zipkin_annotations.endpoint_ipv4</code>. Null when Binary/Annotation.endpoint is null
+     * The column <code>cloudins_apm.zipkin_annotations.endpoint_ipv4</code>. Null when Binary/Annotation.endpoint is null
      */
     public final TableField<ZipkinAnnotationsRecord, Integer> ENDPOINT_IPV4 = createField("endpoint_ipv4", org.jooq.impl.SQLDataType.INTEGER, this, "Null when Binary/Annotation.endpoint is null");
 
     /**
-     * The column <code>cloudins.zipkin_annotations.endpoint_ipv6</code>. Null when Binary/Annotation.endpoint is null, or no IPv6 address
+     * The column <code>cloudins_apm.zipkin_annotations.endpoint_ipv6</code>. Null when Binary/Annotation.endpoint is null, or no IPv6 address
      */
     public final TableField<ZipkinAnnotationsRecord, byte[]> ENDPOINT_IPV6 = createField("endpoint_ipv6", org.jooq.impl.SQLDataType.BINARY.length(16), this, "Null when Binary/Annotation.endpoint is null, or no IPv6 address");
 
     /**
-     * The column <code>cloudins.zipkin_annotations.endpoint_port</code>. Null when Binary/Annotation.endpoint is null
+     * The column <code>cloudins_apm.zipkin_annotations.endpoint_port</code>. Null when Binary/Annotation.endpoint is null
      */
     public final TableField<ZipkinAnnotationsRecord, Short> ENDPOINT_PORT = createField("endpoint_port", org.jooq.impl.SQLDataType.SMALLINT, this, "Null when Binary/Annotation.endpoint is null");
 
     /**
-     * The column <code>cloudins.zipkin_annotations.endpoint_service_name</code>. Null when Binary/Annotation.endpoint is null
+     * The column <code>cloudins_apm.zipkin_annotations.endpoint_service_name</code>. Null when Binary/Annotation.endpoint is null
      */
     public final TableField<ZipkinAnnotationsRecord, String> ENDPOINT_SERVICE_NAME = createField("endpoint_service_name", org.jooq.impl.SQLDataType.VARCHAR.length(255), this, "Null when Binary/Annotation.endpoint is null");
 
     /**
-     * Create a <code>cloudins.zipkin_annotations</code> table reference
+     * Create a <code>cloudins_apm.zipkin_annotations</code> table reference
      */
     public ZipkinAnnotations() {
         this("zipkin_annotations", null);
     }
 
     /**
-     * Create an aliased <code>cloudins.zipkin_annotations</code> table reference
+     * Create an aliased <code>cloudins_apm.zipkin_annotations</code> table reference
      */
     public ZipkinAnnotations(String alias) {
         this(alias, ZIPKIN_ANNOTATIONS);
@@ -126,7 +126,7 @@ public class ZipkinAnnotations extends TableImpl<ZipkinAnnotationsRecord> {
      */
     @Override
     public Schema getSchema() {
-        return Cloudins.CLOUDINS;
+        return CloudinsApm.CLOUDINS_APM;
     }
 
     /**

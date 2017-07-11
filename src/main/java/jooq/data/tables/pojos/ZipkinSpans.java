@@ -22,7 +22,7 @@ import javax.annotation.Generated;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class ZipkinSpans implements Serializable {
 
-    private static final long serialVersionUID = 134972162;
+    private static final long serialVersionUID = 855896242;
 
     private Long    traceId;
     private Long    id;
@@ -30,6 +30,7 @@ public class ZipkinSpans implements Serializable {
     private Long    parentId;
     private Boolean debug;
     private Long    startTs;
+    private Long    recordTs;
     private Long    duration;
 
     public ZipkinSpans() {}
@@ -41,6 +42,7 @@ public class ZipkinSpans implements Serializable {
         this.parentId = value.parentId;
         this.debug = value.debug;
         this.startTs = value.startTs;
+        this.recordTs = value.recordTs;
         this.duration = value.duration;
     }
 
@@ -51,6 +53,7 @@ public class ZipkinSpans implements Serializable {
         Long    parentId,
         Boolean debug,
         Long    startTs,
+        Long    recordTs,
         Long    duration
     ) {
         this.traceId = traceId;
@@ -59,6 +62,7 @@ public class ZipkinSpans implements Serializable {
         this.parentId = parentId;
         this.debug = debug;
         this.startTs = startTs;
+        this.recordTs = recordTs;
         this.duration = duration;
     }
 
@@ -110,6 +114,14 @@ public class ZipkinSpans implements Serializable {
         this.startTs = startTs;
     }
 
+    public Long getRecordTs() {
+        return this.recordTs;
+    }
+
+    public void setRecordTs(Long recordTs) {
+        this.recordTs = recordTs;
+    }
+
     public Long getDuration() {
         return this.duration;
     }
@@ -128,6 +140,7 @@ public class ZipkinSpans implements Serializable {
         sb.append(", ").append(parentId);
         sb.append(", ").append(debug);
         sb.append(", ").append(startTs);
+        sb.append(", ").append(recordTs);
         sb.append(", ").append(duration);
 
         sb.append(")");
