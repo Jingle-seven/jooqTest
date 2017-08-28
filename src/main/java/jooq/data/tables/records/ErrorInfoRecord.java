@@ -6,7 +6,7 @@ package jooq.data.tables.records;
 
 import javax.annotation.Generated;
 
-import jooq.data.tables.ErrorInfo;
+import jooq.data.tables.ErrorInfoTable;
 
 import org.jooq.Field;
 import org.jooq.Record2;
@@ -151,7 +151,7 @@ public class ErrorInfoRecord extends UpdatableRecordImpl<ErrorInfoRecord> implem
      */
     @Override
     public Field<Long> field1() {
-        return ErrorInfo.ERROR_INFO.TRACE_ID;
+        return ErrorInfoTable.ERROR_INFO.TRACE_ID;
     }
 
     /**
@@ -159,7 +159,7 @@ public class ErrorInfoRecord extends UpdatableRecordImpl<ErrorInfoRecord> implem
      */
     @Override
     public Field<Long> field2() {
-        return ErrorInfo.ERROR_INFO.SPAN_ID;
+        return ErrorInfoTable.ERROR_INFO.SPAN_ID;
     }
 
     /**
@@ -167,7 +167,7 @@ public class ErrorInfoRecord extends UpdatableRecordImpl<ErrorInfoRecord> implem
      */
     @Override
     public Field<String> field3() {
-        return ErrorInfo.ERROR_INFO.A_KEY;
+        return ErrorInfoTable.ERROR_INFO.A_KEY;
     }
 
     /**
@@ -175,7 +175,7 @@ public class ErrorInfoRecord extends UpdatableRecordImpl<ErrorInfoRecord> implem
      */
     @Override
     public Field<byte[]> field4() {
-        return ErrorInfo.ERROR_INFO.A_VALUE;
+        return ErrorInfoTable.ERROR_INFO.A_VALUE;
     }
 
     /**
@@ -183,7 +183,7 @@ public class ErrorInfoRecord extends UpdatableRecordImpl<ErrorInfoRecord> implem
      */
     @Override
     public Field<Long> field5() {
-        return ErrorInfo.ERROR_INFO.A_TIMESTAMP;
+        return ErrorInfoTable.ERROR_INFO.A_TIMESTAMP;
     }
 
     /**
@@ -191,7 +191,7 @@ public class ErrorInfoRecord extends UpdatableRecordImpl<ErrorInfoRecord> implem
      */
     @Override
     public Field<String> field6() {
-        return ErrorInfo.ERROR_INFO.ENDPOINT_SERVICE_NAME;
+        return ErrorInfoTable.ERROR_INFO.ENDPOINT_SERVICE_NAME;
     }
 
     /**
@@ -318,14 +318,14 @@ public class ErrorInfoRecord extends UpdatableRecordImpl<ErrorInfoRecord> implem
      * Create a detached ErrorInfoRecord
      */
     public ErrorInfoRecord() {
-        super(ErrorInfo.ERROR_INFO);
+        super(ErrorInfoTable.ERROR_INFO);
     }
 
     /**
      * Create a detached, initialised ErrorInfoRecord
      */
     public ErrorInfoRecord(Long traceId, Long spanId, String aKey, byte[] aValue, Long aTimestamp, String endpointServiceName) {
-        super(ErrorInfo.ERROR_INFO);
+        super(ErrorInfoTable.ERROR_INFO);
 
         set(0, traceId);
         set(1, spanId);

@@ -18,7 +18,7 @@ import jooq.data.tables.CloudinsRole;
 import jooq.data.tables.CloudinsSpanBaseline;
 import jooq.data.tables.CloudinsUser;
 import jooq.data.tables.CloudinsUserRegionAppli;
-import jooq.data.tables.ErrorInfo;
+import jooq.data.tables.ErrorInfoTable;
 import jooq.data.tables.SpanInfos;
 import jooq.data.tables.SpanTopoTest;
 import jooq.data.tables.Spans;
@@ -99,7 +99,7 @@ public class CloudinsApm extends SchemaImpl {
     /**
      * The table <code>cloudins_apm.error_info</code>.
      */
-    public final ErrorInfo ERROR_INFO = jooq.data.tables.ErrorInfo.ERROR_INFO;
+    public final ErrorInfoTable ERROR_INFO = ErrorInfoTable.ERROR_INFO;
 
     /**
      * The table <code>cloudins_apm.spans</code>.
@@ -189,7 +189,7 @@ public class CloudinsApm extends SchemaImpl {
             CloudinsSpanBaseline.CLOUDINS_SPAN_BASELINE,
             CloudinsUser.CLOUDINS_USER,
             CloudinsUserRegionAppli.CLOUDINS_USER_REGION_APPLI,
-            ErrorInfo.ERROR_INFO,
+            ErrorInfoTable.ERROR_INFO,
             Spans.SPANS,
             SpansBackup.SPANS_BACKUP,
             SpanInfos.SPAN_INFOS,

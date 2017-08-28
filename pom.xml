@@ -36,7 +36,8 @@
         </dependency>
     </dependencies>
 
-    <!-- 自动生成orm  $ mvn clean install -Djooq-->
+    <!-- 自动生成orm  $ mvn clean install -Djooq -->
+    <!-- 在下文配置数据库信息 -->
     <profiles>
         <profile>
             <id>jooq</id>
@@ -69,7 +70,7 @@
                         <configuration>
                             <jdbc>
                                 <driver>com.mysql.jdbc.Driver</driver>
-                                <url>jdbc:mysql://127.1.1.2:3306/?useUnicode=true&amp;useJDBCCompliantTimezoneShift=true&amp;useLegacyDatetimeCode=false&amp;serverTimezone=UTC</url>
+                                <url>jdbc:mysql://127.0.0.1:3306/?useUnicode=true&amp;useJDBCCompliantTimezoneShift=true&amp;useLegacyDatetimeCode=false&amp;serverTimezone=UTC</url>
                                 <user>xjh</user>
                                 <password>z</password>
                             </jdbc>

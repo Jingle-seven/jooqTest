@@ -8,7 +8,7 @@ import java.util.List;
 
 import javax.annotation.Generated;
 
-import jooq.data.tables.ErrorInfo;
+import jooq.data.tables.ErrorInfoTable;
 import jooq.data.tables.records.ErrorInfoRecord;
 
 import org.jooq.Configuration;
@@ -33,14 +33,14 @@ public class ErrorInfoDao extends DAOImpl<ErrorInfoRecord, jooq.data.tables.pojo
      * Create a new ErrorInfoDao without any configuration
      */
     public ErrorInfoDao() {
-        super(ErrorInfo.ERROR_INFO, jooq.data.tables.pojos.ErrorInfo.class);
+        super(ErrorInfoTable.ERROR_INFO, jooq.data.tables.pojos.ErrorInfo.class);
     }
 
     /**
      * Create a new ErrorInfoDao with an attached configuration
      */
     public ErrorInfoDao(Configuration configuration) {
-        super(ErrorInfo.ERROR_INFO, jooq.data.tables.pojos.ErrorInfo.class, configuration);
+        super(ErrorInfoTable.ERROR_INFO, jooq.data.tables.pojos.ErrorInfo.class, configuration);
     }
 
     /**
@@ -55,41 +55,41 @@ public class ErrorInfoDao extends DAOImpl<ErrorInfoRecord, jooq.data.tables.pojo
      * Fetch records that have <code>trace_id IN (values)</code>
      */
     public List<jooq.data.tables.pojos.ErrorInfo> fetchByTraceId(Long... values) {
-        return fetch(ErrorInfo.ERROR_INFO.TRACE_ID, values);
+        return fetch(ErrorInfoTable.ERROR_INFO.TRACE_ID, values);
     }
 
     /**
      * Fetch records that have <code>span_id IN (values)</code>
      */
     public List<jooq.data.tables.pojos.ErrorInfo> fetchBySpanId(Long... values) {
-        return fetch(ErrorInfo.ERROR_INFO.SPAN_ID, values);
+        return fetch(ErrorInfoTable.ERROR_INFO.SPAN_ID, values);
     }
 
     /**
      * Fetch records that have <code>a_key IN (values)</code>
      */
     public List<jooq.data.tables.pojos.ErrorInfo> fetchByAKey(String... values) {
-        return fetch(ErrorInfo.ERROR_INFO.A_KEY, values);
+        return fetch(ErrorInfoTable.ERROR_INFO.A_KEY, values);
     }
 
     /**
      * Fetch records that have <code>a_value IN (values)</code>
      */
     public List<jooq.data.tables.pojos.ErrorInfo> fetchByAValue(byte[]... values) {
-        return fetch(ErrorInfo.ERROR_INFO.A_VALUE, values);
+        return fetch(ErrorInfoTable.ERROR_INFO.A_VALUE, values);
     }
 
     /**
      * Fetch records that have <code>a_timestamp IN (values)</code>
      */
     public List<jooq.data.tables.pojos.ErrorInfo> fetchByATimestamp(Long... values) {
-        return fetch(ErrorInfo.ERROR_INFO.A_TIMESTAMP, values);
+        return fetch(ErrorInfoTable.ERROR_INFO.A_TIMESTAMP, values);
     }
 
     /**
      * Fetch records that have <code>endpoint_service_name IN (values)</code>
      */
     public List<jooq.data.tables.pojos.ErrorInfo> fetchByEndpointServiceName(String... values) {
-        return fetch(ErrorInfo.ERROR_INFO.ENDPOINT_SERVICE_NAME, values);
+        return fetch(ErrorInfoTable.ERROR_INFO.ENDPOINT_SERVICE_NAME, values);
     }
 }

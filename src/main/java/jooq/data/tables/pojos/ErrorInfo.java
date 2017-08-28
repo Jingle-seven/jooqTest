@@ -108,7 +108,7 @@ public class ErrorInfo implements Serializable {
 
     @Override
     public String toString() {
-        StringBuilder sb = new StringBuilder("ErrorInfo (");
+        StringBuilder sb = new StringBuilder("ErrorInfoTable (");
 
         sb.append(traceId);
         sb.append(", ").append(spanId);
